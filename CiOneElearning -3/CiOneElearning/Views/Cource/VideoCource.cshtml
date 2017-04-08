@@ -1,0 +1,159 @@
+﻿
+@{
+    ViewBag.Title = "VideoCource";
+    Layout = "~/Views/LayOut/_HomeLayout.cshtml";
+}
+<div class="container-fluid">
+      
+    <!-- Noi dung bai hoc -->
+    <section class="row component-section">
+        <!-- video -->
+        <div class="col-lg-8">
+
+            <!-- Video -->
+            <video width="595" height="420" controls="">
+                <source src="movie.mp4" type="video/mp4">
+            </video>
+            <!-- end Video -->
+            <!--Accordion with icons example -->
+            <div class="panel-group pmd-accordion" id="accordion3" role="tablist" aria-multiselectable="true">
+                <div class="panel active">
+                    <div class="panel-heading" role="tab" id="headingOne">
+                        <h4 class="panel-title"> <a data-toggle="collapse" data-parent="#accordion3" href="#collapseOne3" aria-expanded="true" aria-controls="collapseOne3" data-expandable="false" class=""><i class="material-icons pmd-sm pmd-accordion-icon-left">library_books</i>Tài liệu tham khảo<i class="material-icons md-dark pmd-sm pmd-accordion-arrow">keyboard_arrow_down</i></a> </h4>
+                    </div>
+                    <div id="collapseOne3" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne" aria-expanded="true">
+                        <div class="panel-body">The word "accordion" typically conjures a mental image of your favorite polka band. However that’s not what we are talking about when referring to accordion menu. Although polka music can offer a rip-snorting good time, the term is associated with something different in the realm of web design. User interface accordions might refer to menus, widgets, or content areas which expand like the musical instrument. These interfaces have grown a lot more popular in recent years with the expansion of JavaScript.</div>
+                    </div>
+                </div>
+            </div> <!--Accordion with icons example end -->
+
+        </div>
+        <!-- Gioi thieu tac gia -->
+        <div class="col-lg-4">
+            <div class="component-box">
+                <div class="pmd-card pmd-card-default pmd-z-depth center-box">
+                    <div class="pmd-card-title">
+                        <h2 class="pmd-card-title-text">Tên bài học</h2>
+                    </div>
+                    <div class="btn-group">
+                        <button class="btn pmd-ripple-effect btn-primary" type="button"><i class="material-icons md-dark pmd-md white">chevron_left </i></button>
+
+                        <!-- popup hien cac bai hoc -->
+                        <button data-target="#complete-dialog" data-toggle="modal" class="btn pmd-ripple-effect btn-primary" type="button"><i class="material-icons md-dark pmd-md white">list </i></button>
+                        <!-- popup -->
+                        <div tabindex="-1" class="modal fade" id="complete-dialog" style="display: none;" aria-hidden="true">
+                            <div class="modal-dialog modal-lg" style="margin-top: 0px;">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h2 class="pmd-card-title-text">Bài giảng</h2>
+                                    </div>
+                                    <div class="modal-body text-left">
+                                        <ul class="list-group pmd-z-depth pmd-card-list pmd-list-icon">
+                                            <!-- Phan hoc-->
+                                            <li class="list-group-item active">
+                                                <span class="media-body"><strong>Phần 1: Làm quen với HTML</strong></span>
+                                            </li>
+                                            <!-- end Phan hoc-->
+                                            <!-- Danh sach bai hoc-->
+                                            <li class="list-group-item">
+                                                <a href="">
+                                                    <i class="material-icons media-left pmd-sm">playlist_add_check</i>
+                                                    <i class="material-icons media-left pmd-sm">play_circle_outline</i>
+                                                    <span class="media-body"><strong>Bài 1. Giới thiệu khóa học HTML</strong></span>
+                                                    <span class="media-left"><strong>3:40</strong></span>
+                                                </a>
+                                            </li>
+                                            <!--end Danh sach bai hoc-->
+                                            <!-- Thu thach-->
+                                            <li class="list-group-item">
+                                                <a href="">
+                                                    <i class="material-icons media-left pmd-sm">playlist_add_check</i>
+                                                    <i class="material-icons media-left pmd-sm">keyboard</i>
+                                                    <span class="media-body"><strong>Thu thach 1: Mở 1 trang HTML</strong></span>
+                                                    <span class="media-left"><strong></strong></span>
+                                                </a>
+                                            </li>
+                                            <!--end Thu thach-->
+                                            <!-- Danh sach bai hoc-->
+                                            <li class="list-group-item">
+                                                <a href="">
+                                                    <i class="material-icons media-left pmd-sm">playlist_add_check</i>
+                                                    <i class="material-icons media-left pmd-sm">play_circle_outline</i>
+                                                    <span class="media-body"><strong>Bài 2. Làm quen với HTML</strong></span>
+                                                    <span class="media-left"><strong>11:40</strong></span>
+                                                </a>
+                                            </li>
+                                            <!--end Danh sach bai hoc-->
+                                            <!-- Thu thach-->
+                                            <li class="list-group-item">
+                                                <a href="">
+                                                    <i class="material-icons media-left pmd-sm">playlist_add_check</i>
+                                                    <i class="material-icons media-left pmd-sm">keyboard</i>
+                                                    <span class="media-body"><strong>Thu thach 2: Làm quen với tài liệu HTML</strong></span>
+                                                    <span class="media-left"><strong></strong></span>
+                                                </a>
+                                            </li>
+                                            <!--end Thu thach-->
+                                        </ul>
+                                        <ul class="list-group pmd-z-depth pmd-card-list pmd-list-icon">
+                                            <li class="list-group-item active">
+                                                <span class="media-body"><strong>Phần 2: Tìm hiểu HTML Text</strong></span>
+                                            </li>
+                                            <li class="list-group-item">
+                                                <a href="">
+                                                    <i class="material-icons media-left pmd-sm">playlist_add_check</i>
+                                                    <i class="material-icons media-left pmd-sm">play_circle_outline</i>
+                                                    <span class="media-body"><strong>Bài 1</strong></span>
+                                                    <span class="media-left"><strong>3:40</strong></span>
+                                                </a>
+                                            </li>
+                                            <li class="list-group-item">
+                                                <a href="">
+                                                    <i class="material-icons media-left pmd-sm">playlist_add_check</i>
+                                                    <i class="material-icons media-left pmd-sm">keyboard</i>
+                                                    <span class="media-body"><strong>Thu thach</strong></span>
+                                                    <span class="media-left"></span>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                        <ul class="list-group pmd-z-depth pmd-card-list pmd-list-icon">
+                                            <li class="list-group-item active">
+                                                <span class="media-body"><strong>Đồ án cuối khóa</strong></span>
+                                            </li>
+                                            <li class="list-group-item">
+                                                <a href="">
+                                                    <i class="material-icons media-left pmd-sm">playlist_add_check</i>
+                                                    <i class="material-icons media-left pmd-sm">keyboard</i>
+                                                    <span class="media-body"><strong>Website món ngon Việt Nam</strong></span>
+                                                    <span class="media-left"></span>
+                                                </a>
+                                            </li>
+                                            <li class="list-group-item">
+                                                <a href="">
+                                                    <i class="material-icons media-left pmd-sm">playlist_add_check</i>
+                                                    <i class="material-icons media-left pmd-sm">keyboard</i>
+                                                    <span class="media-body"><strong>Xây dựng website 1</strong></span>
+                                                    <span class="media-left"></span>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="pmd-modal-action pmd-modal-bordered text-right">
+                                        <button data-dismiss="modal" type="button" class="btn btn btn-success">Thoát</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- popup -->
+                        <!-- end popup hien cac bai hoc -->
+
+                        <button class="btn pmd-ripple-effect btn-primary" type="button"> <i class="material-icons md-dark pmd-md white">chevron_right </i></button>
+                    </div> <!-- end Button group -->
+                    <!--dowload soucre -->
+                    <button class="btn pmd-btn-raised btn-success btn-block pmd-ripple-effect download-source" type="button">Tải tài liệu / mã nguồn</button><!-- end dowload soucre -->
+                </div>
+            </div>
+        </div>
+    </section>
+
+</div>

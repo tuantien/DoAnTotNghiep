@@ -1,0 +1,177 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="tien_do_anModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityContainer Name="tien_do_anEntities2" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="BaiGiangs" EntityType="tien_do_anModel.BaiGiang" />
+    <EntitySet Name="CauHois" EntityType="tien_do_anModel.CauHoi" />
+    <EntitySet Name="ChuDes" EntityType="tien_do_anModel.ChuDe" />
+    <EntitySet Name="HocViens" EntityType="tien_do_anModel.HocVien" />
+    <EntitySet Name="KhoaHocs" EntityType="tien_do_anModel.KhoaHoc" />
+    <EntitySet Name="sysdiagrams" EntityType="tien_do_anModel.sysdiagram" />
+    <EntitySet Name="TrangThais" EntityType="tien_do_anModel.TrangThai" />
+    <AssociationSet Name="FK_BaiGiang_ChuDe" Association="tien_do_anModel.FK_BaiGiang_ChuDe">
+      <End Role="ChuDe" EntitySet="ChuDes" />
+      <End Role="BaiGiang" EntitySet="BaiGiangs" />
+    </AssociationSet>
+    <AssociationSet Name="FK_BaiGiang_KhoaHoc" Association="tien_do_anModel.FK_BaiGiang_KhoaHoc">
+      <End Role="KhoaHoc" EntitySet="KhoaHocs" />
+      <End Role="BaiGiang" EntitySet="BaiGiangs" />
+    </AssociationSet>
+    <AssociationSet Name="FK_CauHoi_BaiGiang" Association="tien_do_anModel.FK_CauHoi_BaiGiang">
+      <End Role="BaiGiang" EntitySet="BaiGiangs" />
+      <End Role="CauHoi" EntitySet="CauHois" />
+    </AssociationSet>
+    <AssociationSet Name="FK_HocVien_KhoaHoc" Association="tien_do_anModel.FK_HocVien_KhoaHoc">
+      <End Role="KhoaHoc" EntitySet="KhoaHocs" />
+      <End Role="HocVien" EntitySet="HocViens" />
+    </AssociationSet>
+    <AssociationSet Name="FK_HocVien_TrangThai" Association="tien_do_anModel.FK_HocVien_TrangThai">
+      <End Role="TrangThai" EntitySet="TrangThais" />
+      <End Role="HocVien" EntitySet="HocViens" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="BaiGiang">
+    <Key>
+      <PropertyRef Name="ID_BaiGiang" />
+    </Key>
+    <Property Name="ID_BaiGiang" Type="Int32" Nullable="false" />
+    <Property Name="TenBaiGiang" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="ThoiLuong" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="ID_ChuDe" Type="Int32" />
+    <Property Name="TaiLieuDinhKem" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Video" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="NoiDungBaiGiang" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="ID_KhoaHoc" Type="Int32" />
+    <NavigationProperty Name="ChuDe" Relationship="tien_do_anModel.FK_BaiGiang_ChuDe" FromRole="BaiGiang" ToRole="ChuDe" />
+    <NavigationProperty Name="KhoaHoc" Relationship="tien_do_anModel.FK_BaiGiang_KhoaHoc" FromRole="BaiGiang" ToRole="KhoaHoc" />
+    <NavigationProperty Name="CauHois" Relationship="tien_do_anModel.FK_CauHoi_BaiGiang" FromRole="BaiGiang" ToRole="CauHoi" />
+  </EntityType>
+  <EntityType Name="CauHoi">
+    <Key>
+      <PropertyRef Name="ID_CauHoi" />
+    </Key>
+    <Property Name="ID_CauHoi" Type="Int32" Nullable="false" />
+    <Property Name="TenCauHoi" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="CauTraLoi1" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="CauTraLoi2" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="CauTraLoi3" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="CauTraLoi4" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="ID_BaiGiang" Type="Int32" />
+    <NavigationProperty Name="BaiGiang" Relationship="tien_do_anModel.FK_CauHoi_BaiGiang" FromRole="CauHoi" ToRole="BaiGiang" />
+  </EntityType>
+  <EntityType Name="ChuDe">
+    <Key>
+      <PropertyRef Name="ID_ChuDe" />
+    </Key>
+    <Property Name="ID_ChuDe" Type="Int32" Nullable="false" />
+    <Property Name="TenChuDe" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="BaiGiangs" Relationship="tien_do_anModel.FK_BaiGiang_ChuDe" FromRole="ChuDe" ToRole="BaiGiang" />
+  </EntityType>
+  <EntityType Name="HocVien">
+    <Key>
+      <PropertyRef Name="ID_HocVien" />
+    </Key>
+    <Property Name="ID_HocVien" Type="Int32" Nullable="false" />
+    <Property Name="TenHocVien" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="Email" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="SDT" Type="String" MaxLength="12" FixedLength="false" Unicode="false" />
+    <Property Name="ID_TrangThai" Type="Int32" />
+    <Property Name="NgayThamGia" Type="DateTime" Precision="3" />
+    <Property Name="AnhHocVien" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="MatKhau" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="ID_KhoaHoc" Type="Int32" />
+    <NavigationProperty Name="KhoaHoc" Relationship="tien_do_anModel.FK_HocVien_KhoaHoc" FromRole="HocVien" ToRole="KhoaHoc" />
+    <NavigationProperty Name="TrangThai" Relationship="tien_do_anModel.FK_HocVien_TrangThai" FromRole="HocVien" ToRole="TrangThai" />
+  </EntityType>
+  <EntityType Name="KhoaHoc">
+    <Key>
+      <PropertyRef Name="ID_KhoaHoc" />
+    </Key>
+    <Property Name="ID_KhoaHoc" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="TenKhoaHoc" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="ThoiLuong" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="MoTaNgan" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="GioiThieu" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="NgayMoKH" Type="DateTime" Precision="3" />
+    <Property Name="ID_TacGia" Type="Int32" />
+    <NavigationProperty Name="BaiGiangs" Relationship="tien_do_anModel.FK_BaiGiang_KhoaHoc" FromRole="KhoaHoc" ToRole="BaiGiang" />
+    <NavigationProperty Name="HocViens" Relationship="tien_do_anModel.FK_HocVien_KhoaHoc" FromRole="KhoaHoc" ToRole="HocVien" />
+  </EntityType>
+  <EntityType Name="sysdiagram">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="String" Nullable="false" MaxLength="128" FixedLength="false" Unicode="true" />
+    <Property Name="principal_id" Type="Int32" Nullable="false" />
+    <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="version" Type="Int32" />
+    <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="TrangThai">
+    <Key>
+      <PropertyRef Name="ID_TrangThai" />
+    </Key>
+    <Property Name="ID_TrangThai" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="TenTrangThai" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="HocViens" Relationship="tien_do_anModel.FK_HocVien_TrangThai" FromRole="TrangThai" ToRole="HocVien" />
+  </EntityType>
+  <Association Name="FK_BaiGiang_ChuDe">
+    <End Type="tien_do_anModel.ChuDe" Role="ChuDe" Multiplicity="0..1" />
+    <End Type="tien_do_anModel.BaiGiang" Role="BaiGiang" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ChuDe">
+        <PropertyRef Name="ID_ChuDe" />
+      </Principal>
+      <Dependent Role="BaiGiang">
+        <PropertyRef Name="ID_ChuDe" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_BaiGiang_KhoaHoc">
+    <End Type="tien_do_anModel.KhoaHoc" Role="KhoaHoc" Multiplicity="0..1" />
+    <End Type="tien_do_anModel.BaiGiang" Role="BaiGiang" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="KhoaHoc">
+        <PropertyRef Name="ID_KhoaHoc" />
+      </Principal>
+      <Dependent Role="BaiGiang">
+        <PropertyRef Name="ID_KhoaHoc" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_CauHoi_BaiGiang">
+    <End Type="tien_do_anModel.BaiGiang" Role="BaiGiang" Multiplicity="0..1" />
+    <End Type="tien_do_anModel.CauHoi" Role="CauHoi" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="BaiGiang">
+        <PropertyRef Name="ID_BaiGiang" />
+      </Principal>
+      <Dependent Role="CauHoi">
+        <PropertyRef Name="ID_BaiGiang" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_HocVien_KhoaHoc">
+    <End Type="tien_do_anModel.KhoaHoc" Role="KhoaHoc" Multiplicity="0..1" />
+    <End Type="tien_do_anModel.HocVien" Role="HocVien" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="KhoaHoc">
+        <PropertyRef Name="ID_KhoaHoc" />
+      </Principal>
+      <Dependent Role="HocVien">
+        <PropertyRef Name="ID_KhoaHoc" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_HocVien_TrangThai">
+    <End Type="tien_do_anModel.TrangThai" Role="TrangThai" Multiplicity="0..1" />
+    <End Type="tien_do_anModel.HocVien" Role="HocVien" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TrangThai">
+        <PropertyRef Name="ID_TrangThai" />
+      </Principal>
+      <Dependent Role="HocVien">
+        <PropertyRef Name="ID_TrangThai" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>

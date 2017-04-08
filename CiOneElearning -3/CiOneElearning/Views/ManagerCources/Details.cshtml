@@ -1,0 +1,71 @@
+﻿@model CiOneElearning.Models.KhoaHoc
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/LayOut/_HomeLayout.cshtml";
+}
+
+<h2>Thông Tin Chi Tiết Khóa Học @Model.TenKhoaHoc</h2>
+
+<div>
+	<hr />
+    <dl class="dl-horizontal">
+        <dt>
+           Tên Khóa Học
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TenKhoaHoc)
+        </dd>
+
+        <dt>
+            Thời Lượng
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ThoiLuong)
+        </dd>
+
+        <dt>
+            Mô Tả 
+        </dt>
+
+        <dd>
+            @Html.Raw(Model.MoTaNgan)
+        </dd>
+
+        <dt>
+            Giới Thiệu
+        </dt>
+
+        <dd>
+            @Html.Raw(Model.GioiThieu)
+        </dd>
+
+        <dt>
+           Ngày Mở Khóa Học
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NgayMoKH)
+        </dd>
+
+       
+        <dt>
+            Tên Tác Giả
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TacGia.TenTacGia)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    <a href="@Url.Action("Edit", "ManagerCources", new { id = Model.ID_KhoaHoc })" class="btn btn-success">
+        Sửa
+    </a>
+    <a href="@Url.Action("Index", "ManagerCources")" class="btn btn-secondary">
+        Quay Lại
+    </a> 
+  </p>

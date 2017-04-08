@@ -1,0 +1,168 @@
+E:\Project_Asp\DoAnTotNghiep\CiOneElearning\CiOneElearning\bin\CiOneElearning.dll.config
+E:\Project_Asp\DoAnTotNghiep\CiOneElearning\CiOneElearning\bin\CiOneElearning.dll
+E:\Project_Asp\DoAnTotNghiep\CiOneElearning\CiOneElearning\bin\CiOneElearning.pdb
+E:\Project_Asp\DoAnTotNghiep\CiOneElearning\CiOneElearning\bin\Antlr3.Runtime.dll
+E:\Project_Asp\DoAnTotNghiep\CiOneElearning\CiOneElearning\bin\EntityFramework.dll
+E:\Project_Asp\DoAnTotNghiep\CiOneElearning\CiOneElearning\bin\EntityFramework.SqlServer.dll
+E:\Project_Asp\DoAnTotNghiep\CiOneElearning\CiOneElearning\bin\Microsoft.AspNet.Identity.Core.dll
+E:\Project_Asp\DoAnTotNghiep\CiOneElearning\CiOneElearning\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+E:\Project_Asp\DoAnTotNghiep\CiOneElearning\CiOneElearning\bin\Microsoft.AspNet.Identity.Owin.dll
+E:\Project_Asp\DoAnTotNghiep\CiOneElearning\CiOneElearning\bin\Microsoft.Owin.dll
+E:\Project_Asp\DoAnTotNghiep\CiOneElearning\CiOneElearning\bin\Microsoft.Owin.Host.SystemWeb.dll
+E:\Project_Asp\DoAnTotNghiep\CiOneElearning\CiOneElearning\bin\Microsoft.Owin.Security.Cookies.dll
+E:\Project_Asp\DoAnTotNghiep\CiOneElearning\CiOneElearning\bin\Microsoft.Owin.Security.dll
+E:\Project_Asp\DoAnTotNghiep\CiOneElearning\CiOneElearning\bin\Microsoft.Owin.Security.Facebook.dll
+E:\Project_Asp\DoAnTotNghiep\CiOneElearning\CiOneElearning\bin\Microsoft.Owin.Security.Google.dll
+E:\Project_Asp\DoAnTotNghiep\CiOneElearning\CiOneElearning\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+E:\Project_Asp\DoAnTotNghiep\CiOneElearning\CiOneElearning\bin\Microsoft.Owin.Security.OAuth.dll
+E:\Project_Asp\DoAnTotNghiep\CiOneElearning\CiOneElearning\bin\Microsoft.Owin.Security.Twitter.dll
+E:\Project_Asp\DoAnTotNghiep\CiOneElearning\CiOneElearning\bin\Microsoft.Web.Infrastructure.dll
+E:\Project_Asp\DoAnTotNghiep\CiOneElearning\CiOneElearning\bin\Newtonsoft.Json.dll
+E:\Project_Asp\DoAnTotNghiep\CiOneElearning\CiOneElearning\bin\Owin.dll
+E:\Project_Asp\DoAnTotNghiep\CiOneElearning\CiOneElearning\bin\System.Web.Helpers.dll
+E:\Project_Asp\DoAnTotNghiep\CiOneElearning\CiOneElearning\bin\System.Web.Mvc.dll
+E:\Project_Asp\DoAnTotNghiep\CiOneElearning\CiOneElearning\bin\System.Web.Optimization.dll
+E:\Project_Asp\DoAnTotNghiep\CiOneElearning\CiOneElearning\bin\System.Web.Razor.dll
+E:\Project_Asp\DoAnTotNghiep\CiOneElearning\CiOneElearning\bin\System.Web.WebPages.Deployment.dll
+E:\Project_Asp\DoAnTotNghiep\CiOneElearning\CiOneElearning\bin\System.Web.WebPages.dll
+E:\Project_Asp\DoAnTotNghiep\CiOneElearning\CiOneElearning\bin\System.Web.WebPages.Razor.dll
+E:\Project_Asp\DoAnTotNghiep\CiOneElearning\CiOneElearning\bin\WebGrease.dll
+E:\Project_Asp\DoAnTotNghiep\CiOneElearning\CiOneElearning\bin\EntityFramework.xml
+E:\Project_Asp\DoAnTotNghiep\CiOneElearning\CiOneElearning\bin\EntityFramework.SqlServer.xml
+E:\Project_Asp\DoAnTotNghiep\CiOneElearning\CiOneElearning\bin\System.Web.Helpers.xml
+E:\Project_Asp\DoAnTotNghiep\CiOneElearning\CiOneElearning\bin\System.Web.Mvc.xml
+E:\Project_Asp\DoAnTotNghiep\CiOneElearning\CiOneElearning\bin\System.Web.Optimization.xml
+E:\Project_Asp\DoAnTotNghiep\CiOneElearning\CiOneElearning\bin\System.Web.Razor.xml
+E:\Project_Asp\DoAnTotNghiep\CiOneElearning\CiOneElearning\bin\System.Web.WebPages.xml
+E:\Project_Asp\DoAnTotNghiep\CiOneElearning\CiOneElearning\bin\System.Web.WebPages.Deployment.xml
+E:\Project_Asp\DoAnTotNghiep\CiOneElearning\CiOneElearning\bin\System.Web.WebPages.Razor.xml
+E:\Project_Asp\DoAnTotNghiep\CiOneElearning\CiOneElearning\bin\Newtonsoft.Json.xml
+E:\Project_Asp\DoAnTotNghiep\CiOneElearning\CiOneElearning\bin\Antlr3.Runtime.pdb
+E:\Project_Asp\DoAnTotNghiep\CiOneElearning\CiOneElearning\bin\Microsoft.AspNet.Identity.Core.xml
+E:\Project_Asp\DoAnTotNghiep\CiOneElearning\CiOneElearning\bin\Microsoft.AspNet.Identity.Owin.xml
+E:\Project_Asp\DoAnTotNghiep\CiOneElearning\CiOneElearning\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+E:\Project_Asp\DoAnTotNghiep\CiOneElearning\CiOneElearning\bin\Microsoft.Owin.xml
+E:\Project_Asp\DoAnTotNghiep\CiOneElearning\CiOneElearning\bin\Microsoft.Owin.Host.SystemWeb.xml
+E:\Project_Asp\DoAnTotNghiep\CiOneElearning\CiOneElearning\bin\Microsoft.Owin.Security.xml
+E:\Project_Asp\DoAnTotNghiep\CiOneElearning\CiOneElearning\bin\Microsoft.Owin.Security.Facebook.xml
+E:\Project_Asp\DoAnTotNghiep\CiOneElearning\CiOneElearning\bin\Microsoft.Owin.Security.Cookies.xml
+E:\Project_Asp\DoAnTotNghiep\CiOneElearning\CiOneElearning\bin\Microsoft.Owin.Security.OAuth.xml
+E:\Project_Asp\DoAnTotNghiep\CiOneElearning\CiOneElearning\bin\Microsoft.Owin.Security.Google.xml
+E:\Project_Asp\DoAnTotNghiep\CiOneElearning\CiOneElearning\bin\Microsoft.Owin.Security.Twitter.xml
+E:\Project_Asp\DoAnTotNghiep\CiOneElearning\CiOneElearning\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+E:\Project_Asp\DoAnTotNghiep\CiOneElearning\CiOneElearning\obj\Debug\CiOneElearning.dll
+E:\Project_Asp\DoAnTotNghiep\CiOneElearning\CiOneElearning\obj\Debug\CiOneElearning.pdb
+E:\Project_Asp\DoAnTotNghiep\CiOneElearning - 2\CiOneElearning\bin\CiOneElearning.dll.config
+E:\Project_Asp\DoAnTotNghiep\CiOneElearning - 2\CiOneElearning\bin\CiOneElearning.dll
+E:\Project_Asp\DoAnTotNghiep\CiOneElearning - 2\CiOneElearning\bin\CiOneElearning.pdb
+E:\Project_Asp\DoAnTotNghiep\CiOneElearning - 2\CiOneElearning\bin\Antlr3.Runtime.dll
+E:\Project_Asp\DoAnTotNghiep\CiOneElearning - 2\CiOneElearning\bin\EntityFramework.dll
+E:\Project_Asp\DoAnTotNghiep\CiOneElearning - 2\CiOneElearning\bin\EntityFramework.SqlServer.dll
+E:\Project_Asp\DoAnTotNghiep\CiOneElearning - 2\CiOneElearning\bin\Microsoft.AspNet.Identity.Core.dll
+E:\Project_Asp\DoAnTotNghiep\CiOneElearning - 2\CiOneElearning\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+E:\Project_Asp\DoAnTotNghiep\CiOneElearning - 2\CiOneElearning\bin\Microsoft.AspNet.Identity.Owin.dll
+E:\Project_Asp\DoAnTotNghiep\CiOneElearning - 2\CiOneElearning\bin\Microsoft.Owin.dll
+E:\Project_Asp\DoAnTotNghiep\CiOneElearning - 2\CiOneElearning\bin\Microsoft.Owin.Host.SystemWeb.dll
+E:\Project_Asp\DoAnTotNghiep\CiOneElearning - 2\CiOneElearning\bin\Microsoft.Owin.Security.Cookies.dll
+E:\Project_Asp\DoAnTotNghiep\CiOneElearning - 2\CiOneElearning\bin\Microsoft.Owin.Security.dll
+E:\Project_Asp\DoAnTotNghiep\CiOneElearning - 2\CiOneElearning\bin\Microsoft.Owin.Security.Facebook.dll
+E:\Project_Asp\DoAnTotNghiep\CiOneElearning - 2\CiOneElearning\bin\Microsoft.Owin.Security.Google.dll
+E:\Project_Asp\DoAnTotNghiep\CiOneElearning - 2\CiOneElearning\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+E:\Project_Asp\DoAnTotNghiep\CiOneElearning - 2\CiOneElearning\bin\Microsoft.Owin.Security.OAuth.dll
+E:\Project_Asp\DoAnTotNghiep\CiOneElearning - 2\CiOneElearning\bin\Microsoft.Owin.Security.Twitter.dll
+E:\Project_Asp\DoAnTotNghiep\CiOneElearning - 2\CiOneElearning\bin\Microsoft.Web.Infrastructure.dll
+E:\Project_Asp\DoAnTotNghiep\CiOneElearning - 2\CiOneElearning\bin\Newtonsoft.Json.dll
+E:\Project_Asp\DoAnTotNghiep\CiOneElearning - 2\CiOneElearning\bin\Owin.dll
+E:\Project_Asp\DoAnTotNghiep\CiOneElearning - 2\CiOneElearning\bin\System.Web.Helpers.dll
+E:\Project_Asp\DoAnTotNghiep\CiOneElearning - 2\CiOneElearning\bin\System.Web.Mvc.dll
+E:\Project_Asp\DoAnTotNghiep\CiOneElearning - 2\CiOneElearning\bin\System.Web.Optimization.dll
+E:\Project_Asp\DoAnTotNghiep\CiOneElearning - 2\CiOneElearning\bin\System.Web.Razor.dll
+E:\Project_Asp\DoAnTotNghiep\CiOneElearning - 2\CiOneElearning\bin\System.Web.WebPages.Deployment.dll
+E:\Project_Asp\DoAnTotNghiep\CiOneElearning - 2\CiOneElearning\bin\System.Web.WebPages.dll
+E:\Project_Asp\DoAnTotNghiep\CiOneElearning - 2\CiOneElearning\bin\System.Web.WebPages.Razor.dll
+E:\Project_Asp\DoAnTotNghiep\CiOneElearning - 2\CiOneElearning\bin\WebGrease.dll
+E:\Project_Asp\DoAnTotNghiep\CiOneElearning - 2\CiOneElearning\bin\EntityFramework.xml
+E:\Project_Asp\DoAnTotNghiep\CiOneElearning - 2\CiOneElearning\bin\EntityFramework.SqlServer.xml
+E:\Project_Asp\DoAnTotNghiep\CiOneElearning - 2\CiOneElearning\bin\System.Web.Helpers.xml
+E:\Project_Asp\DoAnTotNghiep\CiOneElearning - 2\CiOneElearning\bin\System.Web.Mvc.xml
+E:\Project_Asp\DoAnTotNghiep\CiOneElearning - 2\CiOneElearning\bin\System.Web.Optimization.xml
+E:\Project_Asp\DoAnTotNghiep\CiOneElearning - 2\CiOneElearning\bin\System.Web.Razor.xml
+E:\Project_Asp\DoAnTotNghiep\CiOneElearning - 2\CiOneElearning\bin\System.Web.WebPages.xml
+E:\Project_Asp\DoAnTotNghiep\CiOneElearning - 2\CiOneElearning\bin\System.Web.WebPages.Deployment.xml
+E:\Project_Asp\DoAnTotNghiep\CiOneElearning - 2\CiOneElearning\bin\System.Web.WebPages.Razor.xml
+E:\Project_Asp\DoAnTotNghiep\CiOneElearning - 2\CiOneElearning\bin\Newtonsoft.Json.xml
+E:\Project_Asp\DoAnTotNghiep\CiOneElearning - 2\CiOneElearning\bin\Antlr3.Runtime.pdb
+E:\Project_Asp\DoAnTotNghiep\CiOneElearning - 2\CiOneElearning\bin\Microsoft.AspNet.Identity.Core.xml
+E:\Project_Asp\DoAnTotNghiep\CiOneElearning - 2\CiOneElearning\bin\Microsoft.AspNet.Identity.Owin.xml
+E:\Project_Asp\DoAnTotNghiep\CiOneElearning - 2\CiOneElearning\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+E:\Project_Asp\DoAnTotNghiep\CiOneElearning - 2\CiOneElearning\bin\Microsoft.Owin.xml
+E:\Project_Asp\DoAnTotNghiep\CiOneElearning - 2\CiOneElearning\bin\Microsoft.Owin.Host.SystemWeb.xml
+E:\Project_Asp\DoAnTotNghiep\CiOneElearning - 2\CiOneElearning\bin\Microsoft.Owin.Security.xml
+E:\Project_Asp\DoAnTotNghiep\CiOneElearning - 2\CiOneElearning\bin\Microsoft.Owin.Security.Facebook.xml
+E:\Project_Asp\DoAnTotNghiep\CiOneElearning - 2\CiOneElearning\bin\Microsoft.Owin.Security.Cookies.xml
+E:\Project_Asp\DoAnTotNghiep\CiOneElearning - 2\CiOneElearning\bin\Microsoft.Owin.Security.OAuth.xml
+E:\Project_Asp\DoAnTotNghiep\CiOneElearning - 2\CiOneElearning\bin\Microsoft.Owin.Security.Google.xml
+E:\Project_Asp\DoAnTotNghiep\CiOneElearning - 2\CiOneElearning\bin\Microsoft.Owin.Security.Twitter.xml
+E:\Project_Asp\DoAnTotNghiep\CiOneElearning - 2\CiOneElearning\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+E:\Project_Asp\DoAnTotNghiep\CiOneElearning - 2\CiOneElearning\obj\Debug\CiOneElearning.dll
+E:\Project_Asp\DoAnTotNghiep\CiOneElearning - 2\CiOneElearning\obj\Debug\CiOneElearning.pdb
+E:\Project_Asp\DoAnTotNghiep\CiOneElearning - 2\CiOneElearning\bin\CKFinder.dll
+E:\Project_Asp\DoAnTotNghiep\CiOneElearning - 2\CiOneElearning\bin\CKFinder.pdb
+E:\Project_Asp\DoAnTotNghiep\CiOneElearning - 2\CiOneElearning\obj\Debug\CiOneElearning.csprojResolveAssemblyReference.cache
+E:\Project_Asp\DoAnTotNghiep\CiOneElearning -3\CiOneElearning\bin\CiOneElearning.dll.config
+E:\Project_Asp\DoAnTotNghiep\CiOneElearning -3\CiOneElearning\bin\CiOneElearning.dll
+E:\Project_Asp\DoAnTotNghiep\CiOneElearning -3\CiOneElearning\bin\CiOneElearning.pdb
+E:\Project_Asp\DoAnTotNghiep\CiOneElearning -3\CiOneElearning\bin\Antlr3.Runtime.dll
+E:\Project_Asp\DoAnTotNghiep\CiOneElearning -3\CiOneElearning\bin\CKFinder.dll
+E:\Project_Asp\DoAnTotNghiep\CiOneElearning -3\CiOneElearning\bin\EntityFramework.dll
+E:\Project_Asp\DoAnTotNghiep\CiOneElearning -3\CiOneElearning\bin\EntityFramework.SqlServer.dll
+E:\Project_Asp\DoAnTotNghiep\CiOneElearning -3\CiOneElearning\bin\Microsoft.AspNet.Identity.Core.dll
+E:\Project_Asp\DoAnTotNghiep\CiOneElearning -3\CiOneElearning\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+E:\Project_Asp\DoAnTotNghiep\CiOneElearning -3\CiOneElearning\bin\Microsoft.AspNet.Identity.Owin.dll
+E:\Project_Asp\DoAnTotNghiep\CiOneElearning -3\CiOneElearning\bin\Microsoft.Owin.dll
+E:\Project_Asp\DoAnTotNghiep\CiOneElearning -3\CiOneElearning\bin\Microsoft.Owin.Host.SystemWeb.dll
+E:\Project_Asp\DoAnTotNghiep\CiOneElearning -3\CiOneElearning\bin\Microsoft.Owin.Security.Cookies.dll
+E:\Project_Asp\DoAnTotNghiep\CiOneElearning -3\CiOneElearning\bin\Microsoft.Owin.Security.dll
+E:\Project_Asp\DoAnTotNghiep\CiOneElearning -3\CiOneElearning\bin\Microsoft.Owin.Security.Facebook.dll
+E:\Project_Asp\DoAnTotNghiep\CiOneElearning -3\CiOneElearning\bin\Microsoft.Owin.Security.Google.dll
+E:\Project_Asp\DoAnTotNghiep\CiOneElearning -3\CiOneElearning\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+E:\Project_Asp\DoAnTotNghiep\CiOneElearning -3\CiOneElearning\bin\Microsoft.Owin.Security.OAuth.dll
+E:\Project_Asp\DoAnTotNghiep\CiOneElearning -3\CiOneElearning\bin\Microsoft.Owin.Security.Twitter.dll
+E:\Project_Asp\DoAnTotNghiep\CiOneElearning -3\CiOneElearning\bin\Microsoft.Web.Infrastructure.dll
+E:\Project_Asp\DoAnTotNghiep\CiOneElearning -3\CiOneElearning\bin\Newtonsoft.Json.dll
+E:\Project_Asp\DoAnTotNghiep\CiOneElearning -3\CiOneElearning\bin\Owin.dll
+E:\Project_Asp\DoAnTotNghiep\CiOneElearning -3\CiOneElearning\bin\System.Web.Helpers.dll
+E:\Project_Asp\DoAnTotNghiep\CiOneElearning -3\CiOneElearning\bin\System.Web.Mvc.dll
+E:\Project_Asp\DoAnTotNghiep\CiOneElearning -3\CiOneElearning\bin\System.Web.Optimization.dll
+E:\Project_Asp\DoAnTotNghiep\CiOneElearning -3\CiOneElearning\bin\System.Web.Razor.dll
+E:\Project_Asp\DoAnTotNghiep\CiOneElearning -3\CiOneElearning\bin\System.Web.WebPages.Deployment.dll
+E:\Project_Asp\DoAnTotNghiep\CiOneElearning -3\CiOneElearning\bin\System.Web.WebPages.dll
+E:\Project_Asp\DoAnTotNghiep\CiOneElearning -3\CiOneElearning\bin\System.Web.WebPages.Razor.dll
+E:\Project_Asp\DoAnTotNghiep\CiOneElearning -3\CiOneElearning\bin\WebGrease.dll
+E:\Project_Asp\DoAnTotNghiep\CiOneElearning -3\CiOneElearning\bin\CKFinder.pdb
+E:\Project_Asp\DoAnTotNghiep\CiOneElearning -3\CiOneElearning\bin\EntityFramework.xml
+E:\Project_Asp\DoAnTotNghiep\CiOneElearning -3\CiOneElearning\bin\EntityFramework.SqlServer.xml
+E:\Project_Asp\DoAnTotNghiep\CiOneElearning -3\CiOneElearning\bin\System.Web.Helpers.xml
+E:\Project_Asp\DoAnTotNghiep\CiOneElearning -3\CiOneElearning\bin\System.Web.Mvc.xml
+E:\Project_Asp\DoAnTotNghiep\CiOneElearning -3\CiOneElearning\bin\System.Web.Optimization.xml
+E:\Project_Asp\DoAnTotNghiep\CiOneElearning -3\CiOneElearning\bin\System.Web.Razor.xml
+E:\Project_Asp\DoAnTotNghiep\CiOneElearning -3\CiOneElearning\bin\System.Web.WebPages.xml
+E:\Project_Asp\DoAnTotNghiep\CiOneElearning -3\CiOneElearning\bin\System.Web.WebPages.Deployment.xml
+E:\Project_Asp\DoAnTotNghiep\CiOneElearning -3\CiOneElearning\bin\System.Web.WebPages.Razor.xml
+E:\Project_Asp\DoAnTotNghiep\CiOneElearning -3\CiOneElearning\bin\Newtonsoft.Json.xml
+E:\Project_Asp\DoAnTotNghiep\CiOneElearning -3\CiOneElearning\bin\Antlr3.Runtime.pdb
+E:\Project_Asp\DoAnTotNghiep\CiOneElearning -3\CiOneElearning\bin\Microsoft.AspNet.Identity.Core.xml
+E:\Project_Asp\DoAnTotNghiep\CiOneElearning -3\CiOneElearning\bin\Microsoft.AspNet.Identity.Owin.xml
+E:\Project_Asp\DoAnTotNghiep\CiOneElearning -3\CiOneElearning\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+E:\Project_Asp\DoAnTotNghiep\CiOneElearning -3\CiOneElearning\bin\Microsoft.Owin.xml
+E:\Project_Asp\DoAnTotNghiep\CiOneElearning -3\CiOneElearning\bin\Microsoft.Owin.Host.SystemWeb.xml
+E:\Project_Asp\DoAnTotNghiep\CiOneElearning -3\CiOneElearning\bin\Microsoft.Owin.Security.xml
+E:\Project_Asp\DoAnTotNghiep\CiOneElearning -3\CiOneElearning\bin\Microsoft.Owin.Security.Facebook.xml
+E:\Project_Asp\DoAnTotNghiep\CiOneElearning -3\CiOneElearning\bin\Microsoft.Owin.Security.Cookies.xml
+E:\Project_Asp\DoAnTotNghiep\CiOneElearning -3\CiOneElearning\bin\Microsoft.Owin.Security.OAuth.xml
+E:\Project_Asp\DoAnTotNghiep\CiOneElearning -3\CiOneElearning\bin\Microsoft.Owin.Security.Google.xml
+E:\Project_Asp\DoAnTotNghiep\CiOneElearning -3\CiOneElearning\bin\Microsoft.Owin.Security.Twitter.xml
+E:\Project_Asp\DoAnTotNghiep\CiOneElearning -3\CiOneElearning\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+E:\Project_Asp\DoAnTotNghiep\CiOneElearning -3\CiOneElearning\obj\Debug\CiOneElearning.dll
+E:\Project_Asp\DoAnTotNghiep\CiOneElearning -3\CiOneElearning\obj\Debug\CiOneElearning.pdb
+E:\Project_Asp\DoAnTotNghiep\CiOneElearning -3\CiOneElearning\obj\Debug\CiOneElearning.csprojResolveAssemblyReference.cache

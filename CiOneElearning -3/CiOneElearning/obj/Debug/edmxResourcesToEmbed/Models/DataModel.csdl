@@ -1,0 +1,196 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="tien_do_anModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="BaiGiang">
+    <Key>
+      <PropertyRef Name="ID_BaiGiang" />
+    </Key>
+    <Property Name="ID_BaiGiang" Type="Int32" Nullable="false" />
+    <Property Name="TenBaiGiang" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="ThoiLuong" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="ID_ChuDe" Type="Int32" />
+    <Property Name="TaiLieuDinhKem" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Video" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="NoiDungBaiGiang" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="ID_KhoaHoc" Type="Int32" />
+    <NavigationProperty Name="ChuDe" Relationship="Self.FK_BaiGiang_ChuDe" FromRole="BaiGiang" ToRole="ChuDe" />
+    <NavigationProperty Name="KhoaHoc" Relationship="Self.FK_BaiGiang_KhoaHoc" FromRole="BaiGiang" ToRole="KhoaHoc" />
+    <NavigationProperty Name="CauHois" Relationship="Self.FK_CauHoi_BaiGiang" FromRole="BaiGiang" ToRole="CauHoi" />
+  </EntityType>
+  <EntityType Name="CauHoi">
+    <Key>
+      <PropertyRef Name="ID_CauHoi" />
+    </Key>
+    <Property Name="ID_CauHoi" Type="Int32" Nullable="false" />
+    <Property Name="TenCauHoi" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="CauTraLoi1" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="CauTraLoi2" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="CauTraLoi3" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="CauTraLoi4" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="ID_BaiGiang" Type="Int32" />
+    <NavigationProperty Name="BaiGiang" Relationship="Self.FK_CauHoi_BaiGiang" FromRole="CauHoi" ToRole="BaiGiang" />
+  </EntityType>
+  <EntityType Name="ChuDe">
+    <Key>
+      <PropertyRef Name="ID_ChuDe" />
+    </Key>
+    <Property Name="ID_ChuDe" Type="Int32" Nullable="false" />
+    <Property Name="TenChuDe" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="BaiGiangs" Relationship="Self.FK_BaiGiang_ChuDe" FromRole="ChuDe" ToRole="BaiGiang" />
+  </EntityType>
+  <EntityType Name="HocVien">
+    <Key>
+      <PropertyRef Name="ID_HocVien" />
+    </Key>
+    <Property Name="ID_HocVien" Type="Int32" Nullable="false" />
+    <Property Name="TenHocVien" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="Email" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="SDT" Type="String" MaxLength="12" FixedLength="false" Unicode="false" />
+    <Property Name="ID_TrangThai" Type="Int32" />
+    <Property Name="NgayThamGia" Type="DateTime" Precision="3" />
+    <Property Name="AnhHocVien" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="MatKhau" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="ID_KhoaHoc" Type="Int32" />
+    <NavigationProperty Name="KhoaHoc" Relationship="Self.FK_HocVien_KhoaHoc" FromRole="HocVien" ToRole="KhoaHoc" />
+    <NavigationProperty Name="TrangThai" Relationship="Self.FK_HocVien_TrangThai" FromRole="HocVien" ToRole="TrangThai" />
+  </EntityType>
+  <EntityType Name="KhoaHoc">
+    <Key>
+      <PropertyRef Name="ID_KhoaHoc" />
+    </Key>
+    <Property Name="ID_KhoaHoc" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="TenKhoaHoc" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="ThoiLuong" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="MoTaNgan" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="GioiThieu" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="NgayMoKH" Type="DateTime" Precision="3" />
+    <Property Name="ID_TacGia" Type="Int32" />
+    <NavigationProperty Name="BaiGiangs" Relationship="Self.FK_BaiGiang_KhoaHoc" FromRole="KhoaHoc" ToRole="BaiGiang" />
+    <NavigationProperty Name="HocViens" Relationship="Self.FK_HocVien_KhoaHoc" FromRole="KhoaHoc" ToRole="HocVien" />
+    <NavigationProperty Name="TacGia" Relationship="Self.FK_KhoaHoc_TacGia" FromRole="KhoaHoc" ToRole="TacGia" />
+    <Property Name="Hello" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+  </EntityType>
+  <EntityType Name="TacGia">
+    <Key>
+      <PropertyRef Name="ID_TacGia" />
+    </Key>
+    <Property Name="ID_TacGia" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="TenTacGia" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="ChucVi" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="GioiThieuTG" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="AnhTG" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="KhoaHocs" Relationship="Self.FK_KhoaHoc_TacGia" FromRole="TacGia" ToRole="KhoaHoc" />
+  </EntityType>
+  <EntityType Name="TrangThai">
+    <Key>
+      <PropertyRef Name="ID_TrangThai" />
+    </Key>
+    <Property Name="ID_TrangThai" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="TenTrangThai" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="HocViens" Relationship="Self.FK_HocVien_TrangThai" FromRole="TrangThai" ToRole="HocVien" />
+  </EntityType>
+  <Association Name="FK_BaiGiang_ChuDe">
+    <End Role="ChuDe" Type="Self.ChuDe" Multiplicity="0..1" />
+    <End Role="BaiGiang" Type="Self.BaiGiang" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ChuDe">
+        <PropertyRef Name="ID_ChuDe" />
+      </Principal>
+      <Dependent Role="BaiGiang">
+        <PropertyRef Name="ID_ChuDe" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_BaiGiang_KhoaHoc">
+    <End Role="KhoaHoc" Type="Self.KhoaHoc" Multiplicity="0..1" />
+    <End Role="BaiGiang" Type="Self.BaiGiang" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="KhoaHoc">
+        <PropertyRef Name="ID_KhoaHoc" />
+      </Principal>
+      <Dependent Role="BaiGiang">
+        <PropertyRef Name="ID_KhoaHoc" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_CauHoi_BaiGiang">
+    <End Role="BaiGiang" Type="Self.BaiGiang" Multiplicity="0..1" />
+    <End Role="CauHoi" Type="Self.CauHoi" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="BaiGiang">
+        <PropertyRef Name="ID_BaiGiang" />
+      </Principal>
+      <Dependent Role="CauHoi">
+        <PropertyRef Name="ID_BaiGiang" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_HocVien_KhoaHoc">
+    <End Role="KhoaHoc" Type="Self.KhoaHoc" Multiplicity="0..1" />
+    <End Role="HocVien" Type="Self.HocVien" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="KhoaHoc">
+        <PropertyRef Name="ID_KhoaHoc" />
+      </Principal>
+      <Dependent Role="HocVien">
+        <PropertyRef Name="ID_KhoaHoc" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_HocVien_TrangThai">
+    <End Role="TrangThai" Type="Self.TrangThai" Multiplicity="0..1" />
+    <End Role="HocVien" Type="Self.HocVien" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TrangThai">
+        <PropertyRef Name="ID_TrangThai" />
+      </Principal>
+      <Dependent Role="HocVien">
+        <PropertyRef Name="ID_TrangThai" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_KhoaHoc_TacGia">
+    <End Role="TacGia" Type="Self.TacGia" Multiplicity="0..1" />
+    <End Role="KhoaHoc" Type="Self.KhoaHoc" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TacGia">
+        <PropertyRef Name="ID_TacGia" />
+      </Principal>
+      <Dependent Role="KhoaHoc">
+        <PropertyRef Name="ID_TacGia" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="dataModel" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="BaiGiangs" EntityType="Self.BaiGiang" />
+    <EntitySet Name="CauHois" EntityType="Self.CauHoi" />
+    <EntitySet Name="ChuDes" EntityType="Self.ChuDe" />
+    <EntitySet Name="HocViens" EntityType="Self.HocVien" />
+    <EntitySet Name="KhoaHocs" EntityType="Self.KhoaHoc" />
+    <EntitySet Name="TacGias" EntityType="Self.TacGia" />
+    <EntitySet Name="TrangThais" EntityType="Self.TrangThai" />
+    <AssociationSet Name="FK_BaiGiang_ChuDe" Association="Self.FK_BaiGiang_ChuDe">
+      <End Role="ChuDe" EntitySet="ChuDes" />
+      <End Role="BaiGiang" EntitySet="BaiGiangs" />
+    </AssociationSet>
+    <AssociationSet Name="FK_BaiGiang_KhoaHoc" Association="Self.FK_BaiGiang_KhoaHoc">
+      <End Role="KhoaHoc" EntitySet="KhoaHocs" />
+      <End Role="BaiGiang" EntitySet="BaiGiangs" />
+    </AssociationSet>
+    <AssociationSet Name="FK_CauHoi_BaiGiang" Association="Self.FK_CauHoi_BaiGiang">
+      <End Role="BaiGiang" EntitySet="BaiGiangs" />
+      <End Role="CauHoi" EntitySet="CauHois" />
+    </AssociationSet>
+    <AssociationSet Name="FK_HocVien_KhoaHoc" Association="Self.FK_HocVien_KhoaHoc">
+      <End Role="KhoaHoc" EntitySet="KhoaHocs" />
+      <End Role="HocVien" EntitySet="HocViens" />
+    </AssociationSet>
+    <AssociationSet Name="FK_HocVien_TrangThai" Association="Self.FK_HocVien_TrangThai">
+      <End Role="TrangThai" EntitySet="TrangThais" />
+      <End Role="HocVien" EntitySet="HocViens" />
+    </AssociationSet>
+    <AssociationSet Name="FK_KhoaHoc_TacGia" Association="Self.FK_KhoaHoc_TacGia">
+      <End Role="TacGia" EntitySet="TacGias" />
+      <End Role="KhoaHoc" EntitySet="KhoaHocs" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

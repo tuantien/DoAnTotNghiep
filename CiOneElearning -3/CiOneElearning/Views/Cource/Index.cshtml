@@ -1,0 +1,43 @@
+﻿@using CiOneElearning.Models
+@model IEnumerable<KhoaHoc>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/LayOut/_HomeLayout.cshtml";
+}
+
+
+<div class="container-fluid">
+    <div class="row" id="card-masonry">
+        @foreach (var item in Model)
+        {
+           
+            <!--Cource -->
+           
+                <div class="col-lg-4 col-sm-6 col-xs-12">
+                    <div class="pmd-z-depth">
+                        <div class="box-cource">
+                            <div class="pmd-card pmd-card-default pmd-z-depth">
+
+                                <div class="pmd-card-title cource-title">
+                                    <h2 class="pmd-card-title-text text-uppercase">@item.TenKhoaHoc</h2>
+                                    <span class="pmd-card-subtitle-text">Giảng Viên: @item.TacGia.TenTacGia</span>
+                                </div>
+                                <div class="pmd-card-body">
+                                    @Html.Raw(item.MoTaNgan)
+                                </div>
+                                <div class="pmd-card-actions text-right">
+                                    <button type="button" class="btn btn-primary"><a href="@Url.Action("DetailCources", "Cource", new { id = item.ID_KhoaHoc})">Xem đề cương</a></button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <span class="btn-loader loader hidden">Loading...</span>
+                    </div>
+                </div><!--end Cource-->
+           
+        }
+
+
+    </div>
+</div>
+

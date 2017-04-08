@@ -1,0 +1,88 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="tien_do_anModelStoreContainer" CdmEntityContainer="dataModel">
+    <EntitySetMapping Name="BaiGiangs">
+      <EntityTypeMapping TypeName="tien_do_anModel.BaiGiang">
+        <MappingFragment StoreEntitySet="BaiGiang">
+          <ScalarProperty Name="ID_BaiGiang" ColumnName="ID_BaiGiang" />
+          <ScalarProperty Name="TenBaiGiang" ColumnName="TenBaiGiang" />
+          <ScalarProperty Name="ThoiLuong" ColumnName="ThoiLuong" />
+          <ScalarProperty Name="ID_ChuDe" ColumnName="ID_ChuDe" />
+          <ScalarProperty Name="TaiLieuDinhKem" ColumnName="TaiLieuDinhKem" />
+          <ScalarProperty Name="Video" ColumnName="Video" />
+          <ScalarProperty Name="NoiDungBaiGiang" ColumnName="NoiDungBaiGiang" />
+          <ScalarProperty Name="ID_KhoaHoc" ColumnName="ID_KhoaHoc" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CauHois">
+      <EntityTypeMapping TypeName="tien_do_anModel.CauHoi">
+        <MappingFragment StoreEntitySet="CauHoi">
+          <ScalarProperty Name="ID_CauHoi" ColumnName="ID_CauHoi" />
+          <ScalarProperty Name="TenCauHoi" ColumnName="TenCauHoi" />
+          <ScalarProperty Name="CauTraLoi1" ColumnName="CauTraLoi1" />
+          <ScalarProperty Name="CauTraLoi2" ColumnName="CauTraLoi2" />
+          <ScalarProperty Name="CauTraLoi3" ColumnName="CauTraLoi3" />
+          <ScalarProperty Name="CauTraLoi4" ColumnName="CauTraLoi4" />
+          <ScalarProperty Name="ID_BaiGiang" ColumnName="ID_BaiGiang" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ChuDes">
+      <EntityTypeMapping TypeName="tien_do_anModel.ChuDe">
+        <MappingFragment StoreEntitySet="ChuDe">
+          <ScalarProperty Name="ID_ChuDe" ColumnName="ID_ChuDe" />
+          <ScalarProperty Name="TenChuDe" ColumnName="TenChuDe" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="HocViens">
+      <EntityTypeMapping TypeName="tien_do_anModel.HocVien">
+        <MappingFragment StoreEntitySet="HocVien">
+          <ScalarProperty Name="ID_HocVien" ColumnName="ID_HocVien" />
+          <ScalarProperty Name="TenHocVien" ColumnName="TenHocVien" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="SDT" ColumnName="SDT" />
+          <ScalarProperty Name="ID_TrangThai" ColumnName="ID_TrangThai" />
+          <ScalarProperty Name="NgayThamGia" ColumnName="NgayThamGia" />
+          <ScalarProperty Name="AnhHocVien" ColumnName="AnhHocVien" />
+          <ScalarProperty Name="MatKhau" ColumnName="MatKhau" />
+          <ScalarProperty Name="ID_KhoaHoc" ColumnName="ID_KhoaHoc" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="KhoaHocs">
+      <EntityTypeMapping TypeName="tien_do_anModel.KhoaHoc">
+        <MappingFragment StoreEntitySet="KhoaHoc">
+          <ScalarProperty Name="Hello" ColumnName="Hello" />
+          <ScalarProperty Name="ID_KhoaHoc" ColumnName="ID_KhoaHoc" />
+          <ScalarProperty Name="TenKhoaHoc" ColumnName="TenKhoaHoc" />
+          <ScalarProperty Name="ThoiLuong" ColumnName="ThoiLuong" />
+          <ScalarProperty Name="MoTaNgan" ColumnName="MoTaNgan" />
+          <ScalarProperty Name="GioiThieu" ColumnName="GioiThieu" />
+          <ScalarProperty Name="NgayMoKH" ColumnName="NgayMoKH" />
+          <ScalarProperty Name="ID_TacGia" ColumnName="ID_TacGia" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TacGias">
+      <EntityTypeMapping TypeName="tien_do_anModel.TacGia">
+        <MappingFragment StoreEntitySet="TacGia">
+          <ScalarProperty Name="ID_TacGia" ColumnName="ID_TacGia" />
+          <ScalarProperty Name="TenTacGia" ColumnName="TenTacGia" />
+          <ScalarProperty Name="ChucVi" ColumnName="ChucVi" />
+          <ScalarProperty Name="GioiThieuTG" ColumnName="GioiThieuTG" />
+          <ScalarProperty Name="AnhTG" ColumnName="AnhTG" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TrangThais">
+      <EntityTypeMapping TypeName="tien_do_anModel.TrangThai">
+        <MappingFragment StoreEntitySet="TrangThai">
+          <ScalarProperty Name="ID_TrangThai" ColumnName="ID_TrangThai" />
+          <ScalarProperty Name="TenTrangThai" ColumnName="TenTrangThai" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

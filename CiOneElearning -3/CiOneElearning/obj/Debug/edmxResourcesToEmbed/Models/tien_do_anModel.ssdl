@@ -1,0 +1,95 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="tien_do_anModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="BAI_GIANG">
+    <Key>
+      <PropertyRef Name="ID_BaiGiang" />
+    </Key>
+    <Property Name="ID_BaiGiang" Type="int" Nullable="false" />
+    <Property Name="TenBaiGiang" Type="nvarchar(max)" />
+    <Property Name="ThoiLuong" Type="nvarchar" MaxLength="50" />
+    <Property Name="ID_ChuDe" Type="int" />
+    <Property Name="TaiLieuDinhKem" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Video" Type="nvarchar(max)" />
+    <Property Name="NoiDungBaiGiang" Type="nvarchar(max)" />
+  </EntityType>
+  <EntityType Name="CAU_HOI">
+    <Key>
+      <PropertyRef Name="ID_CauHoi" />
+    </Key>
+    <Property Name="ID_CauHoi" Type="int" Nullable="false" />
+    <Property Name="TenCauHoi" Type="nvarchar(max)" />
+    <Property Name="CauTraLoi1" Type="nvarchar(max)" />
+    <Property Name="CauTraLoi2" Type="nvarchar(max)" />
+    <Property Name="CauTraLoi3" Type="nvarchar(max)" />
+    <Property Name="CauTraLoi4" Type="nvarchar(max)" />
+  </EntityType>
+  <EntityType Name="CHU_DE">
+    <Key>
+      <PropertyRef Name="ID_ChuDe" />
+    </Key>
+    <Property Name="ID_ChuDe" Type="int" Nullable="false" />
+    <Property Name="TenChuDe" Type="nvarchar" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="HOC_VIEN">
+    <Key>
+      <PropertyRef Name="ID_HocVien" />
+    </Key>
+    <Property Name="ID_HocVien" Type="int" Nullable="false" />
+    <Property Name="TenHocVien" Type="nvarchar" MaxLength="100" />
+    <Property Name="Email" Type="nvarchar" MaxLength="100" />
+    <Property Name="SDT" Type="varchar" MaxLength="12" />
+    <Property Name="ID_TrangThai" Type="int" />
+    <Property Name="NgayThamGia" Type="datetime" />
+    <Property Name="AnhHocVien" Type="nvarchar(max)" />
+    <Property Name="MatKhau" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="KHOA_HOC">
+    <Key>
+      <PropertyRef Name="ID_KhoaHoc" />
+    </Key>
+    <Property Name="ID_KhoaHoc" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="TenKhoaHoc" Type="nvarchar" MaxLength="255" />
+    <Property Name="ThoiLuong" Type="nvarchar" MaxLength="50" />
+    <Property Name="MoTaNgan" Type="nvarchar(max)" />
+    <Property Name="GioiThieu" Type="nvarchar(max)" />
+    <Property Name="NgayMoKH" Type="datetime" />
+  </EntityType>
+  <EntityType Name="sysdiagrams">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="principal_id" Type="int" Nullable="false" />
+    <Property Name="diagram_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="version" Type="int" />
+    <Property Name="definition" Type="varbinary(max)" />
+  </EntityType>
+  <EntityType Name="TAC_GIA">
+    <Key>
+      <PropertyRef Name="ID_TacGia" />
+    </Key>
+    <Property Name="ID_TacGia" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="TenTacGia" Type="nvarchar" MaxLength="100" />
+    <Property Name="ChucVi" Type="nvarchar" MaxLength="100" />
+    <Property Name="GioiThieuTG" Type="nvarchar(max)" />
+    <Property Name="AnhTG" Type="nvarchar(max)" />
+    <Property Name="ID_KhoaHoc" Type="int" />
+  </EntityType>
+  <EntityType Name="TRANG_THAI">
+    <Key>
+      <PropertyRef Name="ID_TrangThai" />
+    </Key>
+    <Property Name="ID_TrangThai" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="TenTrangThai" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityContainer Name="tien_do_anModelStoreContainer">
+    <EntitySet Name="BAI_GIANG" EntityType="Self.BAI_GIANG" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="CAU_HOI" EntityType="Self.CAU_HOI" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="CHU_DE" EntityType="Self.CHU_DE" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="HOC_VIEN" EntityType="Self.HOC_VIEN" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="KHOA_HOC" EntityType="Self.KHOA_HOC" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TAC_GIA" EntityType="Self.TAC_GIA" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TRANG_THAI" EntityType="Self.TRANG_THAI" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>

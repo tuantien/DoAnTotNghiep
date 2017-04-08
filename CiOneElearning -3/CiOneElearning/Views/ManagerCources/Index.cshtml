@@ -1,0 +1,65 @@
+﻿@model IEnumerable<CiOneElearning.Models.KhoaHoc>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/LayOut/_HomeLayout.cshtml";
+}
+
+<h2>Quản Lý Khóa Học</h2>
+
+<p>
+   <button type="button" class="btn btn-success">@Html.ActionLink("Tạo Khóa Học Mới", "Create") </button>
+</p>
+<table class="table">
+    <tr>
+        <th>
+            Tên Khóa Học
+        </th>
+        <th>
+            Thời Lượng
+
+        </th>
+        <th width="200">
+            Mô Tả Ngắn
+        </th>
+        <th>
+           Ngày Mở Khóa Học
+        </th>
+        <th>
+            Tên Tác Giả
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.TenKhoaHoc)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ThoiLuong)
+        </td>
+        <td>
+             @Html.Raw(item.MoTaNgan)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NgayMoKH)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TacGia.TenTacGia)
+        </td>
+        <td>
+            <a href="@Url.Action("Edit", "ManagerCources", new { id=item.ID_KhoaHoc})">
+                <i class="material-icons md-dark pmd-sm">mode_edit</i>
+            </a>       
+            <a href="@Url.Action("Details", "ManagerCources", new { id = item.ID_KhoaHoc })">
+                <i class="material-icons md-dark pmd-sm">info_outline</i>
+            </a>
+            <a href="@Url.Action("Delete", "ManagerCources", new { id = item.ID_KhoaHoc })">
+                <i class="material-icons md-dark pmd-sm delete">delete</i>
+            </a>
+        </td>
+    </tr>
+}
+
+</table>

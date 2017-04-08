@@ -1,0 +1,58 @@
+﻿@model CiOneElearning.Models.TacGia
+
+@{
+    ViewBag.Title = "Delete";
+    Layout = "~/Views/LayOut/_HomeLayout.cshtml";
+}
+
+<h2>Xóa Tác Giả</h2>
+
+<h3>Bạn có muốn xóa tác giả @Model.TenTacGia ?</h3>
+<div>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            Tên Tác Giả
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TenTacGia)
+        </dd>
+
+        <dt>
+           Chức Vị
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ChucVi)
+        </dd>
+
+        <dt>
+           Giới Thiệu Tác Giả
+        </dt>
+
+        <dd>
+            @Html.Raw(Model.GioiThieuTG)
+        </dd>
+
+        <dt>
+            Ảnh Tác Giả
+        </dt>
+
+        <dd>
+            <img src="@Model.AnhTG" width="200" />
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Xóa" class="btn btn-danger" /> 
+            <a href="@Url.Action("Index", "ManagerAuthor")" class="btn btn-secondary">
+                Quay Lại
+            </a> 
+        </div>
+    }
+</div>
