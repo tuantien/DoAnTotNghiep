@@ -4,16 +4,16 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="tien_do_anModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+      <Schema xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl" Alias="Self" Namespace="tien_do_anModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012">
         <EntityType Name="BaiGiang">
           <Key>
             <PropertyRef Name="ID_BaiGiang" />
           </Key>
-          <Property Name="ID_BaiGiang" Type="int" Nullable="false" />
+          <Property Name="ID_BaiGiang" Nullable="false" Type="int" />
           <Property Name="TenBaiGiang" Type="nvarchar(max)" />
-          <Property Name="ThoiLuong" Type="nvarchar" MaxLength="50" />
+          <Property Name="ThoiLuong" MaxLength="50" Type="nvarchar" />
           <Property Name="ID_ChuDe" Type="int" />
-          <Property Name="TaiLieuDinhKem" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="TaiLieuDinhKem" Nullable="false" Type="nvarchar(max)" />
           <Property Name="Video" Type="nvarchar(max)" />
           <Property Name="NoiDungBaiGiang" Type="nvarchar(max)" />
           <Property Name="ID_KhoaHoc" Type="int" />
@@ -22,7 +22,7 @@
           <Key>
             <PropertyRef Name="ID_CauHoi" />
           </Key>
-          <Property Name="ID_CauHoi" Type="int" Nullable="false" />
+          <Property Name="ID_CauHoi" Nullable="false" Type="int" />
           <Property Name="TenCauHoi" Type="nvarchar(max)" />
           <Property Name="CauTraLoi1" Type="nvarchar(max)" />
           <Property Name="CauTraLoi2" Type="nvarchar(max)" />
@@ -34,30 +34,30 @@
           <Key>
             <PropertyRef Name="ID_ChuDe" />
           </Key>
-          <Property Name="ID_ChuDe" Type="int" Nullable="false" />
-          <Property Name="TenChuDe" Type="nvarchar" MaxLength="100" />
+          <Property Name="ID_ChuDe" Nullable="false" Type="int" />
+          <Property Name="TenChuDe" MaxLength="100" Type="nvarchar" />
         </EntityType>
         <EntityType Name="HocVien">
           <Key>
             <PropertyRef Name="ID_HocVien" />
           </Key>
-          <Property Name="ID_HocVien" Type="int" Nullable="false" />
-          <Property Name="TenHocVien" Type="nvarchar" MaxLength="100" />
-          <Property Name="Email" Type="nvarchar" MaxLength="100" />
-          <Property Name="SDT" Type="varchar" MaxLength="12" />
+          <Property Name="ID_HocVien" Nullable="false" Type="int" />
+          <Property Name="TenHocVien" MaxLength="100" Type="nvarchar" />
+          <Property Name="Email" MaxLength="100" Type="nvarchar" />
+          <Property Name="SDT" MaxLength="12" Type="varchar" />
           <Property Name="ID_TrangThai" Type="int" />
           <Property Name="NgayThamGia" Type="datetime" />
           <Property Name="AnhHocVien" Type="nvarchar(max)" />
-          <Property Name="MatKhau" Type="nvarchar" MaxLength="50" />
+          <Property Name="MatKhau" MaxLength="50" Type="nvarchar" />
           <Property Name="ID_KhoaHoc" Type="int" />
         </EntityType>
         <EntityType Name="KhoaHoc">
           <Key>
             <PropertyRef Name="ID_KhoaHoc" />
           </Key>
-          <Property Name="ID_KhoaHoc" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="TenKhoaHoc" Type="nvarchar" MaxLength="255" />
-          <Property Name="ThoiLuong" Type="nvarchar" MaxLength="50" />
+          <Property Name="ID_KhoaHoc" Nullable="false" StoreGeneratedPattern="Identity" Type="int" />
+          <Property Name="TenKhoaHoc" MaxLength="255" Type="nvarchar" />
+          <Property Name="ThoiLuong" MaxLength="50" Type="nvarchar" />
           <Property Name="MoTaNgan" Type="nvarchar(max)" />
           <Property Name="GioiThieu" Type="nvarchar(max)" />
           <Property Name="NgayMoKH" Type="datetime" />
@@ -67,9 +67,9 @@
           <Key>
             <PropertyRef Name="ID_TacGia" />
           </Key>
-          <Property Name="ID_TacGia" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="TenTacGia" Type="nvarchar" MaxLength="100" />
-          <Property Name="ChucVi" Type="nvarchar" MaxLength="100" />
+          <Property Name="ID_TacGia" Nullable="false" StoreGeneratedPattern="Identity" Type="int" />
+          <Property Name="TenTacGia" MaxLength="100" Type="nvarchar" />
+          <Property Name="ChucVi" MaxLength="100" Type="nvarchar" />
           <Property Name="GioiThieuTG" Type="nvarchar(max)" />
           <Property Name="AnhTG" Type="nvarchar(max)" />
         </EntityType>
@@ -77,12 +77,12 @@
           <Key>
             <PropertyRef Name="ID_TrangThai" />
           </Key>
-          <Property Name="ID_TrangThai" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="TenTrangThai" Type="nvarchar" MaxLength="50" />
+          <Property Name="ID_TrangThai" Nullable="false" StoreGeneratedPattern="Identity" Type="int" />
+          <Property Name="TenTrangThai" MaxLength="50" Type="nvarchar" />
         </EntityType>
         <Association Name="FK_BaiGiang_ChuDe">
-          <End Role="ChuDe" Type="Self.ChuDe" Multiplicity="0..1" />
-          <End Role="BaiGiang" Type="Self.BaiGiang" Multiplicity="*" />
+          <End Type="Self.ChuDe" Multiplicity="0..1" Role="ChuDe" />
+          <End Type="Self.BaiGiang" Multiplicity="*" Role="BaiGiang" />
           <ReferentialConstraint>
             <Principal Role="ChuDe">
               <PropertyRef Name="ID_ChuDe" />
@@ -93,8 +93,8 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_BaiGiang_KhoaHoc">
-          <End Role="KhoaHoc" Type="Self.KhoaHoc" Multiplicity="0..1" />
-          <End Role="BaiGiang" Type="Self.BaiGiang" Multiplicity="*" />
+          <End Type="Self.KhoaHoc" Multiplicity="0..1" Role="KhoaHoc" />
+          <End Type="Self.BaiGiang" Multiplicity="*" Role="BaiGiang" />
           <ReferentialConstraint>
             <Principal Role="KhoaHoc">
               <PropertyRef Name="ID_KhoaHoc" />
@@ -105,8 +105,8 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_CauHoi_BaiGiang">
-          <End Role="BaiGiang" Type="Self.BaiGiang" Multiplicity="0..1" />
-          <End Role="CauHoi" Type="Self.CauHoi" Multiplicity="*" />
+          <End Type="Self.BaiGiang" Multiplicity="0..1" Role="BaiGiang" />
+          <End Type="Self.CauHoi" Multiplicity="*" Role="CauHoi" />
           <ReferentialConstraint>
             <Principal Role="BaiGiang">
               <PropertyRef Name="ID_BaiGiang" />
@@ -117,8 +117,8 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_HocVien_KhoaHoc">
-          <End Role="KhoaHoc" Type="Self.KhoaHoc" Multiplicity="0..1" />
-          <End Role="HocVien" Type="Self.HocVien" Multiplicity="*" />
+          <End Type="Self.KhoaHoc" Multiplicity="0..1" Role="KhoaHoc" />
+          <End Type="Self.HocVien" Multiplicity="*" Role="HocVien" />
           <ReferentialConstraint>
             <Principal Role="KhoaHoc">
               <PropertyRef Name="ID_KhoaHoc" />
@@ -129,8 +129,8 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_HocVien_TrangThai">
-          <End Role="TrangThai" Type="Self.TrangThai" Multiplicity="0..1" />
-          <End Role="HocVien" Type="Self.HocVien" Multiplicity="*" />
+          <End Type="Self.TrangThai" Multiplicity="0..1" Role="TrangThai" />
+          <End Type="Self.HocVien" Multiplicity="*" Role="HocVien" />
           <ReferentialConstraint>
             <Principal Role="TrangThai">
               <PropertyRef Name="ID_TrangThai" />
@@ -141,8 +141,8 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_KhoaHoc_TacGia">
-          <End Role="TacGia" Type="Self.TacGia" Multiplicity="0..1" />
-          <End Role="KhoaHoc" Type="Self.KhoaHoc" Multiplicity="*" />
+          <End Type="Self.TacGia" Multiplicity="0..1" Role="TacGia" />
+          <End Type="Self.KhoaHoc" Multiplicity="*" Role="KhoaHoc" />
           <ReferentialConstraint>
             <Principal Role="TacGia">
               <PropertyRef Name="ID_TacGia" />
@@ -161,28 +161,28 @@
           <EntitySet Name="TacGia" EntityType="Self.TacGia" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="TrangThai" EntityType="Self.TrangThai" Schema="dbo" store:Type="Tables" />
           <AssociationSet Name="FK_BaiGiang_ChuDe" Association="Self.FK_BaiGiang_ChuDe">
-            <End Role="ChuDe" EntitySet="ChuDe" />
-            <End Role="BaiGiang" EntitySet="BaiGiang" />
+            <End EntitySet="ChuDe" Role="ChuDe" />
+            <End EntitySet="BaiGiang" Role="BaiGiang" />
           </AssociationSet>
           <AssociationSet Name="FK_BaiGiang_KhoaHoc" Association="Self.FK_BaiGiang_KhoaHoc">
-            <End Role="KhoaHoc" EntitySet="KhoaHoc" />
-            <End Role="BaiGiang" EntitySet="BaiGiang" />
+            <End EntitySet="KhoaHoc" Role="KhoaHoc" />
+            <End EntitySet="BaiGiang" Role="BaiGiang" />
           </AssociationSet>
           <AssociationSet Name="FK_CauHoi_BaiGiang" Association="Self.FK_CauHoi_BaiGiang">
-            <End Role="BaiGiang" EntitySet="BaiGiang" />
-            <End Role="CauHoi" EntitySet="CauHoi" />
+            <End EntitySet="BaiGiang" Role="BaiGiang" />
+            <End EntitySet="CauHoi" Role="CauHoi" />
           </AssociationSet>
           <AssociationSet Name="FK_HocVien_KhoaHoc" Association="Self.FK_HocVien_KhoaHoc">
-            <End Role="KhoaHoc" EntitySet="KhoaHoc" />
-            <End Role="HocVien" EntitySet="HocVien" />
+            <End EntitySet="KhoaHoc" Role="KhoaHoc" />
+            <End EntitySet="HocVien" Role="HocVien" />
           </AssociationSet>
           <AssociationSet Name="FK_HocVien_TrangThai" Association="Self.FK_HocVien_TrangThai">
-            <End Role="TrangThai" EntitySet="TrangThai" />
-            <End Role="HocVien" EntitySet="HocVien" />
+            <End EntitySet="TrangThai" Role="TrangThai" />
+            <End EntitySet="HocVien" Role="HocVien" />
           </AssociationSet>
           <AssociationSet Name="FK_KhoaHoc_TacGia" Association="Self.FK_KhoaHoc_TacGia">
-            <End Role="TacGia" EntitySet="TacGia" />
-            <End Role="KhoaHoc" EntitySet="KhoaHoc" />
+            <End EntitySet="TacGia" Role="TacGia" />
+            <End EntitySet="KhoaHoc" Role="KhoaHoc" />
           </AssociationSet>
         </EntityContainer>
       </Schema>
