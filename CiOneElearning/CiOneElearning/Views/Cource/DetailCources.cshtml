@@ -1,0 +1,139 @@
+﻿@using CiOneElearning.Models
+@model KhoaHoc
+@{
+    ViewBag.Title = "DetailCources";
+    Layout = "~/Views/LayOut/_HomeLayout.cshtml";
+}
+<div class="container-fluid">
+    <h1></h1>
+    <!-- Title -->
+    <h1 class="section-title" id="services">
+        <span>Nội Dung Khóa Học @Model.TenKhoaHoc</span>
+    </h1><!-- End Title -->
+    <!-- Noi dung khoa hoc -->
+    <section class="row component-section">
+        <!-- Danh sach khoa hoc -->
+        <div class="col-lg-8">
+            <div id="bootbasic">
+                @Html.Raw(Model.GioiThieu)
+                <p></p>               
+            </div>
+
+            <ul class="list-group pmd-z-depth pmd-card-list pmd-list-icon">
+                <!-- Phan hoc-->
+                <li class="list-group-item active">
+                    <span class="media-body"><strong>Phần 1: Làm quen với HTML</strong></span>
+                </li>
+                <!-- end Phan hoc-->
+                <!-- Danh sach bai hoc-->
+                <li class="list-group-item">
+                    <a href="@Url.Action("VideoCource","Cource")">
+                        <i class="material-icons media-left pmd-sm">playlist_add_check</i>
+                        <i class="material-icons media-left pmd-sm">play_circle_outline</i>
+                        <span class="media-body"><strong>Bài 1. Giới thiệu khóa học HTML</strong></span>
+                        <span class="media-left"><strong>3:40</strong></span>
+                    </a>
+                </li>
+                <!--end Danh sach bai hoc-->
+                <!-- Thu thach-->
+                <li class="list-group-item">
+                    <a href="">
+                        <i class="material-icons media-left pmd-sm">playlist_add_check</i>
+                        <i class="material-icons media-left pmd-sm">keyboard</i>
+                        <span class="media-body"><strong>Thu thach 1: Mở 1 trang HTML</strong></span>
+                        <span class="media-left"><strong></strong></span>
+                    </a>
+                </li>
+                <!--end Thu thach-->
+                <!-- Danh sach bai hoc-->
+                <li class="list-group-item">
+                    <a href="">
+                        <i class="material-icons media-left pmd-sm">playlist_add_check</i>
+                        <i class="material-icons media-left pmd-sm">play_circle_outline</i>
+                        <span class="media-body"><strong>Bài 2. Làm quen với HTML</strong></span>
+                        <span class="media-left"><strong>11:40</strong></span>
+                    </a>
+                </li>
+                <!--end Danh sach bai hoc-->
+                <!-- Thu thach-->
+                <li class="list-group-item">
+                    <a href="">
+                        <i class="material-icons media-left pmd-sm">playlist_add_check</i>
+                        <i class="material-icons media-left pmd-sm">keyboard</i>
+                        <span class="media-body"><strong>Thu thach 2: Làm quen với tài liệu HTML</strong></span>
+                        <span class="media-left"><strong></strong></span>
+                    </a>
+                </li>
+                <!--end Thu thach-->
+            </ul>
+            <ul class="list-group pmd-z-depth pmd-card-list pmd-list-icon">
+                <li class="list-group-item active">
+                    <span class="media-body"><strong>Phần 2: Tìm hiểu HTML Text</strong></span>
+                </li>
+                <li class="list-group-item">
+                    <a href="">
+                        <i class="material-icons media-left pmd-sm">playlist_add_check</i>
+                        <i class="material-icons media-left pmd-sm">play_circle_outline</i>
+                        <span class="media-body"><strong>Bài 1</strong></span>
+                        <span class="media-left"><strong>3:40</strong></span>
+                    </a>
+                </li>
+                <li class="list-group-item">
+                    <a href="">
+                        <i class="material-icons media-left pmd-sm">playlist_add_check</i>
+                        <i class="material-icons media-left pmd-sm">keyboard</i>
+                        <span class="media-body"><strong>Thu thach</strong></span>
+                        <span class="media-left"></span>
+                    </a>
+                </li>
+            </ul>
+            <ul class="list-group pmd-z-depth pmd-card-list pmd-list-icon">
+                <li class="list-group-item active">
+                    <span class="media-body"><strong>Đồ án cuối khóa</strong></span>
+                </li>
+                <li class="list-group-item">
+                    <a href="">
+                        <i class="material-icons media-left pmd-sm">playlist_add_check</i>
+                        <i class="material-icons media-left pmd-sm">keyboard</i>
+                        <span class="media-body"><strong>Website món ngon Việt Nam</strong></span>
+                        <span class="media-left"></span>
+                    </a>
+                </li>
+                <li class="list-group-item">
+                    <a href="">
+                        <i class="material-icons media-left pmd-sm">playlist_add_check</i>
+                        <i class="material-icons media-left pmd-sm">keyboard</i>
+                        <span class="media-body"><strong>Xây dựng website 1</strong></span>
+                        <span class="media-left"></span>
+                    </a>
+                </li>
+            </ul>
+        </div><!-- end Danh sach khoa hoc -->
+        <!-- Gioi thieu tac gia -->
+        <div class="col-lg-4">
+            <div class="component-box">
+
+                <div class="pmd-card pmd-card-default pmd-z-depth">
+                    <div class="pmd-card-title">
+                        <h2 class="pmd-card-title-text">@Model.TacGia.TenTacGia</h2>
+                        <span class="pmd-card-subtitle-text">@Model.TacGia.ChucVi</span>
+                    </div>
+                    <div class="pmd-card-media">
+                        <img src="@Model.TacGia.AnhTG" width="1184" height="666" class="img-responsive">
+                    </div>
+
+                    <div class="pmd-card-body">
+                        @Html.Raw(Model.TacGia.GioiThieuTG)
+                    
+                    </div>
+                </div>
+
+
+            </div>
+        </div><!-- Basic Bootstrap Tooltip code and example end-->
+
+    </section>
+
+</div>
+
+

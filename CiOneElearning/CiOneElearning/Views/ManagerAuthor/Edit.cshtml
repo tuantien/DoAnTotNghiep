@@ -1,0 +1,81 @@
+﻿@model CiOneElearning.Models.TacGia
+
+@{
+    ViewBag.Title = "Edit";
+    Layout = "~/Views/LayOut/_HomeLayout.cshtml";
+}
+
+<h2>Chỉnh Sửa Tác Giả</h2>
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+    
+    <div class="form-horizontal">  
+        <hr />
+        @Html.ValidationSummary(true)
+        @Html.HiddenFor(model => model.ID_TacGia)
+
+        <div class="form-group">
+            @Html.Label("Tên Tác Giả", new { @class = "control-label col-md-2" })
+            <div class="col-md-4">
+                @Html.TextBoxFor(model => model.TenTacGia, new { @class = "form-control" })
+                @Html.ValidationMessageFor(model => model.TenTacGia)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.Label("Chức Vị", new { @class = "control-label col-md-2" })
+            <div class="col-md-4">
+                @Html.TextBoxFor(model => model.ChucVi, new { @class = "form-control" })
+                @Html.ValidationMessageFor(model => model.ChucVi)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.Label("Giới Thiệu", new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.TextAreaFor(model => model.GioiThieuTG)
+                @Html.ValidationMessageFor(model => model.GioiThieuTG)
+            </div>
+            <script type="text/javascript">
+                CKEDITOR.replace("GioiThieuTG");
+            </script>
+
+        </div>
+
+        <div class="form-group">
+            @Html.Label("Hình Ảnh", new { @class = "control-label col-md-2" })
+            <div class="col-md-8">
+                @Html.TextBoxFor(model => model.AnhTG, new { @class = "form-control" })
+                @Html.ValidationMessageFor(model => model.AnhTG)
+            </div>
+            <div class="col-md-2">
+                <input type="button" id="Browser" value="Chọn ảnh" class="btn btn-secondary " />
+            </div>
+            <!-- Su kien select Image -->
+            <script>
+                $("#Browser").click(function () {
+                    var finder = new CKFinder();
+                    finder.selectActionFunction = function (fileUrl) {
+                        //fileUrl = fileUrl.substring(fileUrl.lastIndexOf("/"+1));
+                        $("#AnhTG").val(fileUrl);
+                    };
+                    finder.popup();
+                });
+            </script>
+        </div>
+
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Lưu" class="btn btn-success" />
+            </div>
+        </div>
+    </div>
+}
+
+<div>
+    <a href="@Url.Action("Index", "ManagerAuthor")" class="btn btn-secondary">
+        Quay Lại
+    </a>   
+</div>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="cbced58250604affae92ef8a71f70af4" Name="Diagram1">
+        <EntityTypeShape EntityType="tien_do_anModel.BaiGiang" Width="1.5" PointX="5.25" PointY="4" IsExpanded="true" />
+        <EntityTypeShape EntityType="tien_do_anModel.CauHoi" Width="1.5" PointX="7.5" PointY="8.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="tien_do_anModel.ChuDe" Width="1.5" PointX="3" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="tien_do_anModel.HocVien" Width="1.5" PointX="8.25" PointY="4" IsExpanded="true" />
+        <EntityTypeShape EntityType="tien_do_anModel.KhoaHoc" Width="1.5" PointX="3" PointY="4.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="tien_do_anModel.TacGia" Width="1.5" PointX="0.75" PointY="4.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="tien_do_anModel.TrangThai" Width="1.5" PointX="6" PointY="0.75" IsExpanded="true" />
+        <AssociationConnector Association="tien_do_anModel.FK_BaiGiang_ChuDe" ManuallyRouted="false" />
+        <AssociationConnector Association="tien_do_anModel.FK_BaiGiang_KhoaHoc" ManuallyRouted="false" />
+        <AssociationConnector Association="tien_do_anModel.FK_CauHoi_BaiGiang" ManuallyRouted="false" />
+        <AssociationConnector Association="tien_do_anModel.FK_HocVien_KhoaHoc" ManuallyRouted="false" />
+        <AssociationConnector Association="tien_do_anModel.FK_HocVien_TrangThai" ManuallyRouted="false" />
+        <AssociationConnector Association="tien_do_anModel.FK_KhoaHoc_TacGia" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

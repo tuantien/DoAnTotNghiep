@@ -1,0 +1,86 @@
+﻿@model CiOneElearning.Models.KhoaHoc
+
+@{
+    ViewBag.Title = "Create";
+    Layout = "~/Views/LayOut/_HomeLayout.cshtml";
+}
+
+<h2>Thêm mới khóa học</h2>
+
+@using (Html.BeginForm()) 
+{
+    @Html.AntiForgeryToken()
+    
+    <div class="form-horizontal">
+        <hr />
+        @Html.ValidationSummary(true)
+
+        <div class="form-group">
+            @Html.Label("Tên Khóa Học", new { @class = "control-label col-md-3" })
+            <div class="col-md-4">
+                @Html.TextBoxFor(model => model.TenKhoaHoc, new { @class = "form-control" })
+                @Html.ValidationMessageFor(model => model.TenKhoaHoc)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.Label("Thời Lượng", new { @class = "control-label col-md-3" })
+            <div class="col-md-4">
+                @Html.TextBoxFor(model => model.ThoiLuong, new { @class = "form-control" })
+                @Html.ValidationMessageFor(model => model.ThoiLuong)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.Label("Mô Tả Ngắn", new { @class = "control-label col-md-3" })
+            <div class="col-md-9">
+                @Html.TextAreaFor(model => model.MoTaNgan)
+                @Html.ValidationMessageFor(model => model.MoTaNgan)
+            </div>
+            <script type="text/javascript">
+                CKEDITOR.replace("MoTaNgan");
+            </script>
+        </div>
+
+        <div class="form-group">
+            @Html.Label("Giới Thiệu", new { @class = "control-label col-md-3" })
+            <div class="col-md-9">
+                @Html.TextAreaFor(model => model.GioiThieu)
+                @Html.ValidationMessageFor(model => model.GioiThieu)
+            </div>
+            <script type="text/javascript">
+                CKEDITOR.replace("GioiThieu");
+            </script>
+        </div>
+
+        <div class="form-group">
+            @Html.Label("Ngày Mở Khóa Học", new { @class = "control-label col-md-3" })
+            <div class="col-md-4">
+                @Html.TextBoxFor(model => model.NgayMoKH, new { @class = "form-control" })
+                @Html.ValidationMessageFor(model => model.NgayMoKH)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.Label("Tác Giả", new { @class = "control-label col-md-3" })
+            <div class="col-md-4">
+                @Html.DropDownList("ID_TacGia", null,new { @class = "form-control" })
+                @Html.ValidationMessageFor(model => model.ID_TacGia)
+            </div>
+        </div>
+
+       
+
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10 ">
+                <input type="submit" value="Lưu" class="btn btn-success " />
+            </div>
+        </div>
+    </div>
+}
+
+<div>
+    <a href="@Url.Action("Index", "ManagerCources")" class="btn btn-secondary">
+        Quay Lại
+    </a> 
+</div>

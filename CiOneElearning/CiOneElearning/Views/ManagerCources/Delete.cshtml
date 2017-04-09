@@ -1,0 +1,74 @@
+﻿@model CiOneElearning.Models.KhoaHoc
+
+@{
+    ViewBag.Title = "Delete";
+    Layout = "~/Views/LayOut/_HomeLayout.cshtml";
+}
+
+<h2>Xóa Khóa Học</h2>
+
+<h3>Bạn có muốn xóa khóa học @Model.TenKhoaHoc ?</h3>
+<div>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            Tên Khóa Học
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TenKhoaHoc)
+        </dd>
+
+        <dt>
+            Thời Lượng
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ThoiLuong)
+        </dd>
+
+        <dt>
+           Mô Tả
+        </dt>
+
+        <dd>
+            @Html.Raw(Model.MoTaNgan)
+        </dd>
+
+        <dt>
+           Giới Thiệu
+        </dt>
+
+        <dd>
+            @Html.Raw(Model.GioiThieu)
+        </dd>
+
+        <dt>
+            Ngày Mở Khóa Học
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NgayMoKH)
+        </dd>        
+
+        <dt>
+            Tên Tác Giả
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TacGia.TenTacGia)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Xóa" class="btn btn-danger" /> 
+            <a href="@Url.Action("Index", "ManagerCources")" class="btn btn-secondary">
+                Quay Lại
+            </a> 
+        </div>
+    }
+</div>
