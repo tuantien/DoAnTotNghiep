@@ -18,6 +18,14 @@
         <AssociationConnector Association="tien_do_anModel.FK_HocVien_KhoaHoc" ManuallyRouted="false" />
         <AssociationConnector Association="tien_do_anModel.FK_HocVien_TrangThai" ManuallyRouted="false" />
         <AssociationConnector Association="tien_do_anModel.FK_KhoaHoc_TacGia" ManuallyRouted="false" />
+        <EntityTypeShape EntityType="tien_do_anModel.C__MigrationHistory" Width="1.5" PointX="0.75" PointY="8.75" />
+        <EntityTypeShape EntityType="tien_do_anModel.AspNetRole" Width="1.5" PointX="10.75" PointY="2.5" />
+        <EntityTypeShape EntityType="tien_do_anModel.AspNetUserClaim" Width="1.5" PointX="15.25" PointY="3.625" />
+        <EntityTypeShape EntityType="tien_do_anModel.AspNetUserLogin" Width="1.5" PointX="15.25" PointY="1" />
+        <EntityTypeShape EntityType="tien_do_anModel.AspNetUser" Width="1.5" PointX="13" PointY="1.375" />
+        <AssociationConnector Association="tien_do_anModel.FK_dbo_AspNetUserClaims_dbo_AspNetUsers_UserId" />
+        <AssociationConnector Association="tien_do_anModel.FK_dbo_AspNetUserLogins_dbo_AspNetUsers_UserId" />
+        <AssociationConnector Association="tien_do_anModel.AspNetUserRoles" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

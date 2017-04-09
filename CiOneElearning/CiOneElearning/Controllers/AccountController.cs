@@ -83,7 +83,7 @@ namespace CiOneElearning.Controllers
             {
                 if (user.EmailConfirmed == false)
                 {
-                    ModelState.AddModelError("CustomError", "Tài khoản chưa được xác thực.");
+                    ModelState.AddModelError("CustomError", "Tài khoản chưa được xác thực. Bạn vui lòng kiểm tra email mà bạn đã đăng ký trên hệ thống để xác thực cho tài khoản của bạn");
                     return View(model);
                 }
             }
@@ -143,7 +143,7 @@ namespace CiOneElearning.Controllers
                     return View("Lockout");
                 case SignInStatus.Failure:
                 default:
-                    ModelState.AddModelError("", "Invalid code.");
+                    ModelState.AddModelError("", "Sai tài khoản hoặc mật khẩu");
                     return View(model);
             }
         }
@@ -227,10 +227,10 @@ namespace CiOneElearning.Controllers
 
                 // For more information on how to enable account confirmation and password reset please visit http://go.microsoft.com/fwlink/?LinkID=320771
                 // Send an email with this link
-                // string code = await UserManager.GeneratePasswordResetTokenAsync(user.Id);
-                // var callbackUrl = Url.Action("ResetPassword", "Account", new { userId = user.Id, code = code }, protocol: Request.Url.Scheme);		
-                // await UserManager.SendEmailAsync(user.Id, "Reset Password", "Please reset your password by clicking <a href=\"" + callbackUrl + "\">here</a>");
-                // return RedirectToAction("ForgotPasswordConfirmation", "Account");
+                string code = await UserManager.GeneratePasswordResetTokenAsync(user.Id);
+                var callbackUrl = Url.Action("ResetPassword", "Account", new { userId = user.Id, code = code }, protocol: Request.Url.Scheme);
+                await UserManager.SendEmailAsync(user.Id, "Lấy lại mật khảu", "Click vào  <a href=\"" + callbackUrl + "\">đây</a> để thực hiện lấy lại mật khẩu.");
+                return RedirectToAction("ForgotPasswordConfirmation", "Account");
             }
 
             // If we got this far, something failed, redisplay form

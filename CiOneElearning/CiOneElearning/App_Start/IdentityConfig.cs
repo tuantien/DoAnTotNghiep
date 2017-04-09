@@ -27,11 +27,11 @@ namespace CiOneElearning
                 Port = 587,
                 UseDefaultCredentials = false,
                 DeliveryMethod = SmtpDeliveryMethod.Network,
-                Credentials = new NetworkCredential("tuantiensiu@gmail.com", "CiOne2015*"),     
+                Credentials = new NetworkCredential("luongthihungulaw@gmail.com", "luongthihung"),     
                 EnableSsl = true,
             };
 
-            var from = new MailAddress("tuantiensiu@gmail.com", "Admin CiOneElearning");
+            var from = new MailAddress("luongthihungulaw@gmail.com", "Admin CiOneElearning");
             var to = new MailAddress(message.Destination);
 
             var mail = new MailMessage(from, to)
