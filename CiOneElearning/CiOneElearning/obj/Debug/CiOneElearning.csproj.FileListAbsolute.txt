@@ -54,3 +54,4 @@ E:\Github\DoAnTotNghiep\CiOneElearning\CiOneElearning\bin\Microsoft.Owin.Securit
 E:\Github\DoAnTotNghiep\CiOneElearning\CiOneElearning\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
 E:\Github\DoAnTotNghiep\CiOneElearning\CiOneElearning\obj\Debug\CiOneElearning.dll
 E:\Github\DoAnTotNghiep\CiOneElearning\CiOneElearning\obj\Debug\CiOneElearning.pdb
+E:\Github\DoAnTotNghiep\CiOneElearning\CiOneElearning\obj\Debug\CiOneElearning.csprojResolveAssemblyReference.cache

@@ -5,7 +5,7 @@ namespace CiOneElearning.Models
 {
     public class ExternalLoginConfirmationViewModel
     {
-        [Required]
+        [Required(ErrorMessage = "Bạn chưa nhập Email")]
         [Display(Name = "Email")]
         public string Email { get; set; }
     }
@@ -29,11 +29,11 @@ namespace CiOneElearning.Models
         public string Provider { get; set; }
 
         [Required]
-        [Display(Name = "Code")]
+        [Display(Name = "Mã")]
         public string Code { get; set; }
         public string ReturnUrl { get; set; }
 
-        [Display(Name = "Remember this browser?")]
+        [Display(Name = "Lưu trình duyệt này ?")]
         public bool RememberBrowser { get; set; }
 
         public bool RememberMe { get; set; }
@@ -41,63 +41,63 @@ namespace CiOneElearning.Models
 
     public class ForgotViewModel
     {
-        [Required]
+        [Required(ErrorMessage = "Bạn chưa nhập Email")]
         [Display(Name = "Email")]
         public string Email { get; set; }
     }
 
     public class LoginViewModel
     {
-        [Required]
+        [Required(ErrorMessage = "Bạn chưa nhập Email")]
         [Display(Name = "Email")]
-        [EmailAddress]
+        [EmailAddress(ErrorMessage = "Email không hợp lệ. Xin kiểm tra lại")]
         public string Email { get; set; }
 
-        [Required]
+        [Required(ErrorMessage = "Bạn chưa nhập mật khẩu")]
         [DataType(DataType.Password)]
-        [Display(Name = "Password")]
+        [Display(Name = "Mật Khẩu")]
         public string Password { get; set; }
 
-        [Display(Name = "Remember me?")]
+        [Display(Name = "Lưu thông tin đăng nhập?")]
         public bool RememberMe { get; set; }
     }
 
     public class RegisterViewModel
     {
-        [Required]
-        [EmailAddress]
+        [Required(ErrorMessage = "Bạn chưa nhập Email")]
+        [EmailAddress(ErrorMessage = "Email không hợp lệ. Xin kiểm tra lại")]
         [Display(Name = "Email")]
         public string Email { get; set; }
 
-        [Required]
+        [Required(ErrorMessage = "Bạn chưa nhập mật khẩu")]
         [StringLength(100, ErrorMessage = " {0} phải ít nhất {2} ký tự", MinimumLength = 6)]
         [DataType(DataType.Password)]
         [Display(Name = "Mật khẩu")]
         public string Password { get; set; }
 
         [DataType(DataType.Password)]
-        [Display(Name = "Nhập lại mật khẩu")]
-        [Compare("Password", ErrorMessage = "Mật khẩu không trùng khớp")]
+        [Display(Name = "Xác thực mật khẩu")]
+        [Compare("Password", ErrorMessage = "Mật khẩu và Xác thực mật khẩu không khớp ")]
         public string ConfirmPassword { get; set; }
                
     }
 
     public class ResetPasswordViewModel
     {
-        [Required]
-        [EmailAddress]
+        [Required(ErrorMessage = "Bạn chưa nhập Email")]
+        [EmailAddress(ErrorMessage = "Email không hợp lệ. Xin kiểm tra lại")]
         [Display(Name = "Email")]
         public string Email { get; set; }
 
-        [Required]
-        [StringLength(100, ErrorMessage = "The {0} must be at least {2} characters long.", MinimumLength = 6)]
+        [Required(ErrorMessage = "Bạn chưa nhập mật khẩu")]
+        [StringLength(100, ErrorMessage = " {0} phải ít nhất {2} ký tự", MinimumLength = 6)]
         [DataType(DataType.Password)]
-        [Display(Name = "Password")]
+        [Display(Name = "Mật khẩu")]
         public string Password { get; set; }
 
         [DataType(DataType.Password)]
-        [Display(Name = "Confirm password")]
-        [Compare("Password", ErrorMessage = "The password and confirmation password do not match.")]
+        [Display(Name = "Xác thực mật khẩu")]
+        [Compare("Password", ErrorMessage = "Mật khẩu và Xác thực mật khẩu không khớp ")]
         public string ConfirmPassword { get; set; }
 
         public string Code { get; set; }
@@ -105,8 +105,8 @@ namespace CiOneElearning.Models
 
     public class ForgotPasswordViewModel
     {
-        [Required]
-        [EmailAddress]
+        [Required(ErrorMessage = "Bạn chưa nhập Email")]
+        [EmailAddress(ErrorMessage = "Email không hợp lệ. Xin kiểm tra lại")]
         [Display(Name = "Email")]
         public string Email { get; set; }
     }
