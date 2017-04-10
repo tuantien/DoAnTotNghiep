@@ -164,6 +164,9 @@
     <Compile Include="App_Start\IdentityConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
+    <Compile Include="Areas\Admin\AdminAreaRegistration.cs" />
+    <Compile Include="Areas\Admin\Controllers\ManageRoleController.cs" />
+    <Compile Include="Areas\Admin\Controllers\ManageUserController.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\AuthorController.cs" />
     <Compile Include="Controllers\CourceController.cs" />
@@ -2368,6 +2371,14 @@
     <Content Include="Content\fonts\glyphicons-halflings-regular.woff" />
     <Content Include="Content\fonts\glyphicons-halflings-regular.woff2" />
     <Content Include="Content\_bootstrap-datetimepicker.less" />
+    <Content Include="Areas\Admin\Views\web.config" />
+    <Content Include="Areas\Admin\Views\ManageRole\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\ManageRole\Create.cshtml" />
+    <Content Include="Areas\Admin\Views\ManageRole\Delete.cshtml" />
+    <Content Include="Areas\Admin\Views\ManageUser\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\ManageUser\Edit.cshtml" />
+    <Content Include="Areas\Admin\Views\ManageUser\Delete.cshtml" />
+    <Content Include="Areas\Admin\Views\ManageUser\EditRole.cshtml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
@@ -2434,6 +2445,8 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Areas\Admin\Models\" />
+    <Folder Include="Areas\Admin\Views\Shared\" />
     <Folder Include="Content\components\data-table\extensions\FixedColumns\examples\integration\" />
     <Folder Include="Content\components\floating-action-button\js\" />
     <Folder Include="Content\components\notification\" />
