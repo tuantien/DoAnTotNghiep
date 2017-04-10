@@ -54,15 +54,15 @@ namespace CiOneElearning
             //   consumerKey: "",
             //   consumerSecret: "");
 
-            //app.UseFacebookAuthentication(
-            //   appId: "",
-            //   appSecret: "");
+            app.UseFacebookAuthentication(
+               appId: "408149726232413",
+               appSecret: "511b007c9ce7f75c8adb890f716b389a");
 
-            //app.UseGoogleAuthentication(new GoogleOAuth2AuthenticationOptions()
-            //{
-            //    ClientId = "",
-            //    ClientSecret = ""
-            //});
+            app.UseGoogleAuthentication(new GoogleOAuth2AuthenticationOptions()
+            {
+                ClientId = "534675448435-7t73nkv6uvd8bah75itgobjtq8l7n0tj.apps.googleusercontent.com",
+                ClientSecret = "qhxR_U3xyuGPJaIPBY3bUhbM"
+            });
         }
     }
 }

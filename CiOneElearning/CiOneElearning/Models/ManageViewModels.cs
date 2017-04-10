@@ -27,7 +27,7 @@ namespace CiOneElearning.Models
 
     public class SetPasswordViewModel
     {
-        [Required]
+        [Required(ErrorMessage = "Bạn chưa nhập mật khẩu")]
         [StringLength(100, ErrorMessage = " {0} phải ít nhất {2} ký tự", MinimumLength = 6)]
         [DataType(DataType.Password)]
         [Display(Name = "Mật khẩu mới")]
@@ -41,20 +41,20 @@ namespace CiOneElearning.Models
 
     public class ChangePasswordViewModel
     {
-        [Required]
+        [Required(ErrorMessage = "Bạn chưa nhập mật khẩu hiện tại")]
         [DataType(DataType.Password)]
         [Display(Name = "Mật khẩu hiện tại")]
         public string OldPassword { get; set; }
 
-        [Required]
+        [Required(ErrorMessage = "Bạn chưa nhập mật khẩu mới")]
         [StringLength(100, ErrorMessage = " {0} phải ít nhất {2} ký tự ", MinimumLength = 6)]
         [DataType(DataType.Password)]
         [Display(Name = "Mật khẩu mới")]
         public string NewPassword { get; set; }
 
         [DataType(DataType.Password)]
-        [Display(Name = "Nhập lại mật khẩu")]
-        [Compare("NewPassword", ErrorMessage = "Mật khẩu không trùng khớp ")]
+        [Display(Name = "Xác thực mật khẩu")]
+        [Compare("NewPassword", ErrorMessage = "Mật khẩu mới và xác thực mật khẩu không khớp ")]
         public string ConfirmPassword { get; set; }
     }
 
