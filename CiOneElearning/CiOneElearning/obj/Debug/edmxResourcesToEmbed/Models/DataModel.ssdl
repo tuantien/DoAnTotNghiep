@@ -49,7 +49,7 @@
       <PropertyRef Name="Id" />
     </Key>
     <Property Name="Id" Type="nvarchar" MaxLength="128" Nullable="false" />
-    <Property Name="Email" Type="nvarchar" MaxLength="256" />
+    <Property Name="Email" Type="nvarchar" MaxLength="256" Nullable="false" />
     <Property Name="EmailConfirmed" Type="bit" Nullable="false" />
     <Property Name="PasswordHash" Type="nvarchar(max)" />
     <Property Name="SecurityStamp" Type="nvarchar(max)" />
@@ -58,9 +58,8 @@
     <Property Name="LockoutEndDateUtc" Type="datetime" />
     <Property Name="LockoutEnabled" Type="bit" Nullable="false" />
     <Property Name="AccessFailedCount" Type="int" Nullable="false" />
-    <Property Name="UserName" Type="nvarchar" MaxLength="256" Nullable="false" />
+    <Property Name="UserName" Type="nvarchar" MaxLength="256" />
     <Property Name="PhoneNumber" Type="nvarchar(max)" />
-    <Property Name="Name" Type="nvarchar(max)" />
   </EntityType>
   <EntityType Name="BaiGiang">
     <Key>

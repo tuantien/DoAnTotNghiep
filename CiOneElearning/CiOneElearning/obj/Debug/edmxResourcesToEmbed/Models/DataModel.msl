@@ -123,7 +123,6 @@
     <EntitySetMapping Name="AspNetUsers">
       <EntityTypeMapping TypeName="tien_do_anModel.AspNetUser">
         <MappingFragment StoreEntitySet="AspNetUsers">
-          <ScalarProperty Name="Name" ColumnName="Name" />
           <ScalarProperty Name="UserName" ColumnName="UserName" />
           <ScalarProperty Name="AccessFailedCount" ColumnName="AccessFailedCount" />
           <ScalarProperty Name="LockoutEnabled" ColumnName="LockoutEnabled" />

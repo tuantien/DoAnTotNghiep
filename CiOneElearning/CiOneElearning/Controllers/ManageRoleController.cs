@@ -5,8 +5,10 @@ using System.Web;
 using System.Web.Mvc;
 using CiOneElearning.Models;
 using Microsoft.AspNet.Identity.EntityFramework;
-namespace CiOneElearning.Areas.Admin.Controllers
+
+namespace CiOneElearning.Controllers
 {
+    [Authorize]
     public class ManageRoleController : Controller
     {
         ApplicationDbContext context = new ApplicationDbContext();
@@ -17,7 +19,6 @@ namespace CiOneElearning.Areas.Admin.Controllers
             return View(model);
         }
         public ViewResult Create()
-
         {
 
             return View();
@@ -29,15 +30,12 @@ namespace CiOneElearning.Areas.Admin.Controllers
         [ValidateAntiForgeryToken]
 
         public ActionResult Create(IdentityRole role)
-
         {
 
             try
-
             {
 
                 if (ModelState.IsValid)
-
                 {
 
                     context.Roles.Add(role);
@@ -50,8 +48,7 @@ namespace CiOneElearning.Areas.Admin.Controllers
 
             }
 
-            catch(Exception ex)
-
+            catch (Exception ex)
             {
 
                 ModelState.AddModelError("", ex.Message);

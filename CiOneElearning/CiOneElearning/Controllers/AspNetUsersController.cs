@@ -10,123 +10,107 @@ using CiOneElearning.Models;
 
 namespace CiOneElearning.Controllers
 {
-    [Authorize(Roles = "Admin")]
-    public class ManagerCourcesController : Controller
+    public class AspNetUsersController : Controller
     {
         private dataModel db = new dataModel();
-               
-        // GET: /ManagerCources/
+
+        // GET: AspNetUsers
         public ActionResult Index()
         {
-            var khoahocs = db.KhoaHocs.Include(k => k.TacGia);
-            return View(khoahocs.ToList());
+            return View(db.AspNetUsers.ToList());
         }
 
-        // GET: /ManagerCources/Details/5
-        
-        public ActionResult Details(int? id)
+        // GET: AspNetUsers/Details/5
+        public ActionResult Details(string id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            KhoaHoc khoahoc = db.KhoaHocs.Find(id);
-            if (khoahoc == null)
+            AspNetUser aspNetUser = db.AspNetUsers.Find(id);
+            if (aspNetUser == null)
             {
                 return HttpNotFound();
             }
-            return View(khoahoc);
+            return View(aspNetUser);
         }
 
-        // GET: /ManagerCources/Create
-     
+        // GET: AspNetUsers/Create
         public ActionResult Create()
         {
-            ViewBag.ID_TacGia = new SelectList(db.TacGias, "ID_TacGia", "TenTacGia");
             return View();
         }
 
-        // POST: /ManagerCources/Create
+        // POST: AspNetUsers/Create
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
-        
         [HttpPost]
         [ValidateAntiForgeryToken]
-        [ValidateInput(false)]
-
-        public ActionResult Create([Bind(Include="ID_KhoaHoc,TenKhoaHoc,ThoiLuong,MoTaNgan,GioiThieu,NgayMoKH,ID_TacGia,Hello")] KhoaHoc khoahoc)
+        public ActionResult Create([Bind(Include = "Id,Email,EmailConfirmed,PasswordHash,SecurityStamp,PhoneNumber,PhoneNumberConfirmed,TwoFactorEnabled,LockoutEndDateUtc,LockoutEnabled,AccessFailedCount,UserName")] AspNetUser aspNetUser)
         {
             if (ModelState.IsValid)
             {
-                db.KhoaHocs.Add(khoahoc);
+                db.AspNetUsers.Add(aspNetUser);
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
 
-            ViewBag.ID_TacGia = new SelectList(db.TacGias, "ID_TacGia", "TenTacGia", khoahoc.ID_TacGia);
-            return View(khoahoc);
+            return View(aspNetUser);
         }
 
-        
-        // GET: /ManagerCources/Edit/5
-        public ActionResult Edit(int? id)
+        // GET: AspNetUsers/Edit/5
+        public ActionResult Edit(string id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            KhoaHoc khoahoc = db.KhoaHocs.Find(id);
-            if (khoahoc == null)
+            AspNetUser aspNetUser = db.AspNetUsers.Find(id);
+            if (aspNetUser == null)
             {
                 return HttpNotFound();
             }
-            ViewBag.ID_TacGia = new SelectList(db.TacGias, "ID_TacGia", "TenTacGia", khoahoc.ID_TacGia);
-            return View(khoahoc);
+            return View(aspNetUser);
         }
 
-        // POST: /ManagerCources/Edit/5
+        // POST: AspNetUsers/Edit/5
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
-       
         [HttpPost]
         [ValidateAntiForgeryToken]
-        [ValidateInput(false)]
-        public ActionResult Edit([Bind(Include="ID_KhoaHoc,TenKhoaHoc,ThoiLuong,MoTaNgan,GioiThieu,NgayMoKH,ID_TacGia,Hello")] KhoaHoc khoahoc)
+        public ActionResult Edit([Bind(Include = "Id,Email,EmailConfirmed,PasswordHash,SecurityStamp,PhoneNumber,PhoneNumberConfirmed,TwoFactorEnabled,LockoutEndDateUtc,LockoutEnabled,AccessFailedCount,UserName")] AspNetUser aspNetUser)
         {
             if (ModelState.IsValid)
             {
-                db.Entry(khoahoc).State = EntityState.Modified;
+                db.Entry(aspNetUser).State = EntityState.Modified;
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
-            ViewBag.ID_TacGia = new SelectList(db.TacGias, "ID_TacGia", "TenTacGia", khoahoc.ID_TacGia);
-            return View(khoahoc);
+            return View(aspNetUser);
         }
 
-        
-        // GET: /ManagerCources/Delete/5
-        public ActionResult Delete(int? id)
+        // GET: AspNetUsers/Delete/5
+        public ActionResult Delete(string id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            KhoaHoc khoahoc = db.KhoaHocs.Find(id);
-            if (khoahoc == null)
+            AspNetUser aspNetUser = db.AspNetUsers.Find(id);
+            if (aspNetUser == null)
             {
                 return HttpNotFound();
             }
-            return View(khoahoc);
+            return View(aspNetUser);
         }
 
-        
-        // POST: /ManagerCources/Delete/5
+        // POST: AspNetUsers/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
-        public ActionResult DeleteConfirmed(int id)
+        public ActionResult DeleteConfirmed(string id)
         {
-            KhoaHoc khoahoc = db.KhoaHocs.Find(id);
-            db.KhoaHocs.Remove(khoahoc);
+            AspNetUser aspNetUser = db.AspNetUsers.Find(id);
+            db.AspNetUsers.Remove(aspNetUser);
             db.SaveChanges();
             return RedirectToAction("Index");
         }

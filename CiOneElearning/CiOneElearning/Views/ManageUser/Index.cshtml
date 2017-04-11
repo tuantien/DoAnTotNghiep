@@ -1,0 +1,73 @@
+﻿@using CiOneElearning.Models;
+
+@model IEnumerable<ApplicationUser>
+
+@{
+
+    ViewBag.Title = "Quản lý thành viên";
+
+    Layout = "~/Views/LayOut/_HomeLayout.cshtml";
+
+}
+
+<div class="row">
+
+    <div class="col-sm-12">
+
+        <h2>@ViewBag.Title</h2>
+
+        <hr />
+
+        <table class="table table-borderer">
+
+            <thead>
+
+                <tr>
+                    <th>Email</th>
+                    <th>Họ và Tên</th>
+                    <th>Số điện thoại</th>
+                </tr>
+
+            </thead>
+
+            <tbody>
+
+                @foreach (var item in Model)
+                {
+
+                    <tr>
+
+
+                        <td>@item.Email</td>
+                        <td>@item.UserName</td>
+                        <td>@item.PhoneNumber</td>
+
+
+                        <td>
+                            <a href="@Url.Action("Edit", "ManageUser", new { id = item.Id })">
+                                <i class="material-icons md-dark pmd-sm">mode_edit</i>
+                            </a>
+                            <a href="@Url.Action("EditRole", "ManageUser", new { id = item.Id })">
+                                <i class="material-icons md-dark pmd-sm">build</i>
+                            </a>
+                            <a href="@Url.Action("Delete", "ManageUser", new { id = item.Id })">
+                                <i class="material-icons md-dark pmd-sm delete">delete</i>
+                            </a>
+                           
+                        </td>
+
+                    </tr>
+
+                }
+
+            </tbody>
+
+        </table>
+        <div class="form-group">
+            <a href="@Url.Action("Index", "Cource")" class="btn btn-danger">
+                Thoát
+            </a>
+        </div>
+    </div>
+
+</div>

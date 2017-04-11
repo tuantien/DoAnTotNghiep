@@ -8,11 +8,13 @@ using System.Net;
 
 namespace CiOneElearning.Controllers
 {
+    
     public class CourceController : Controller
     {
         //
         // GET: /Cource/
         dataModel db = new dataModel();
+       
         public ActionResult Index()
         {
             var listcource = db.KhoaHocs;
@@ -24,11 +26,13 @@ namespace CiOneElearning.Controllers
             return PartialView(listcource);
         }
         //Thông tin khóa học
+           
         public ActionResult DetailCource()
         {
             
             return View();
         }
+       
         public ActionResult DetailCources(int ?id)
         {
             

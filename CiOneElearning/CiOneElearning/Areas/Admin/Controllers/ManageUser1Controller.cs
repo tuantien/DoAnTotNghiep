@@ -8,9 +8,8 @@ using Microsoft.AspNet.Identity.EntityFramework;
 
 namespace CiOneElearning.Areas.Admin.Controllers
 {
-    [Authorize(Users = "tuantiensiu@gmail.com")]
-
-    public class ManageUserController : Controller
+    [Authorize(Roles = "Admin")]
+    public class ManageUser1Controller : Controller
     {
 
         ApplicationDbContext context = new ApplicationDbContext();

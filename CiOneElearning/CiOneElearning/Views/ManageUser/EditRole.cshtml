@@ -16,7 +16,7 @@
 
         <hr />
 
-        <h5><strong>Các quyền hiện tại của thành viên @Model.Email:</strong> </h5>
+        <h5>Các quyền hiện tại của thành viên<strong> @Model.Email:</strong> </h5>
 
         <table class="table">
 
@@ -43,14 +43,14 @@
                         <tr>
 
                             <td>@item.RoleId</td>
-
+                           
                             <td>
 
                                 <form action="@Url.Action("DeleteRoleFromUser", new { UserId = item.UserId, RoleId = item.RoleId })" method="post">
 
                                     @Html.AntiForgeryToken()
 
-                                    <button type="submit" class="btn btn-xs btn-danger">Gỡ bỏ</button>
+                                    <button type="submit" class="btn btn-danger">Gỡ bỏ quyền này</button>
 
                                 </form>
 
@@ -96,7 +96,9 @@
                 <br />
 
                 <button type="submit" class="btn btn-primary">Thêm </button>
-
+                <a href="@Url.Action("Edit", "ManageUser")" class="btn btn-danger">
+                    Quay Lại
+                </a>   
             </div>
 
         </form>
