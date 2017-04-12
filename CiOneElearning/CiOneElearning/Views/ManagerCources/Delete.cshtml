@@ -1,74 +1,37 @@
 ﻿@model CiOneElearning.Models.KhoaHoc
 
 @{
-    ViewBag.Title = "Delete";
+    ViewBag.Title = "Xóa Khóa Học";
     Layout = "~/Views/LayOut/_HomeLayout.cshtml";
 }
 
-<h2>Xóa Khóa Học</h2>
+<div class="row">
 
-<h3>Bạn có muốn xóa khóa học @Model.TenKhoaHoc ?</h3>
-<div>
-    <hr />
-    <dl class="dl-horizontal">
-        <dt>
-            Tên Khóa Học
-        </dt>
+    <div class="col-sm-12">
 
-        <dd>
-            @Html.DisplayFor(model => model.TenKhoaHoc)
-        </dd>
+        <h2>@ViewBag.Title</h2>
 
-        <dt>
-            Thời Lượng
-        </dt>
+        <hr />
 
-        <dd>
-            @Html.DisplayFor(model => model.ThoiLuong)
-        </dd>
+        <div class="text-center">
 
-        <dt>
-           Mô Tả
-        </dt>
+            <h5>Bạn có chắc muốn xóa khóa học <strong>@Model.TenKhoaHoc?</strong></h5>
 
-        <dd>
-            @Html.Raw(Model.MoTaNgan)
-        </dd>
+            @using (Html.BeginForm())
+            {
 
-        <dt>
-           Giới Thiệu
-        </dt>
+                @Html.AntiForgeryToken()
 
-        <dd>
-            @Html.Raw(Model.GioiThieu)
-        </dd>
+                @Html.ValidationSummary("", new { @class = "text-danger" })
 
-        <dt>
-            Ngày Mở Khóa Học
-        </dt>
+                <button type="submit" class="btn btn-primary">Chấp nhận</button>
 
-        <dd>
-            @Html.DisplayFor(model => model.NgayMoKH)
-        </dd>        
+                <a href="@Url.Action("Index")" class="btn btn-default">Không xóa</a>
 
-        <dt>
-            Tên Tác Giả
-        </dt>
+            }
 
-        <dd>
-            @Html.DisplayFor(model => model.TacGia.TenTacGia)
-        </dd>
-
-    </dl>
-
-    @using (Html.BeginForm()) {
-        @Html.AntiForgeryToken()
-
-        <div class="form-actions no-color">
-            <input type="submit" value="Xóa" class="btn btn-danger" /> 
-            <a href="@Url.Action("Index", "ManagerCources")" class="btn btn-secondary">
-                Quay Lại
-            </a> 
         </div>
-    }
+
+    </div>
+
 </div>

@@ -10,7 +10,7 @@ using CiOneElearning.Models;
 
 namespace CiOneElearning.Controllers
 {
-    [Authorize(Roles = "Admin")]
+
     public class ManagerCourcesController : Controller
     {
         private dataModel db = new dataModel();

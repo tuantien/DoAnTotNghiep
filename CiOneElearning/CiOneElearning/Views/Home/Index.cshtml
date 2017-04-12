@@ -1,31 +1,293 @@
 ﻿@{
     ViewBag.Title = "Home Page";
 }
-
-<div class="jumbotron">
-    <h1>ASP.NET</h1>
-    <p class="lead">ASP.NET is a free web framework for building great Web sites and Web applications using HTML, CSS and JavaScript.</p>
-    <p><a href="http://asp.net" class="btn btn-primary btn-large">Learn more &raquo;</a></p>
+<!--header strat here-->
+<div class="banner agileits">
+    <div class="header">
+        <div class="container">
+            <div class="banner-main">
+                <section class="slider">
+                    <div class="flexslider">
+                        <ul class="slides">
+                            <li>
+                                <div class="banner-main">
+                                    <h3>Lộ trình bài bản nhất quán</h3>
+                                    <p>Để đạt được sự nghiệp Web Developer (nhà phát triển website) bạn cần phải có một lộ trình học lập trình web bài bản ngay từ đầu để có nền tảng vững chắc cho sự tìm hiểu, nghiên cứu các công nghệ mới thay đổi từng ngày trong lĩnh vực này. Lộ trình là một tập hợp các khoá học được thiết kế tuần tự, hệ thống hoá kiến thức chặt chẽ nhằm giúp học viên đạt được mục tiêu nghề nghiệp.</p>
+                                    <div class="clearfix"> </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="banner-main">
+                                    <h3>Được chuyên gia hướng dẫn tận tình</h3>
+                                    <p>Học lập trình web là một chặng đường đầy thử thách vì thế có người kinh nghiệm dẫn dắt sẽ là một lợi thế rất lớn để rút ngắn thời gian và tạo cảm hứng cho chúng ta theo đuổi sự nghiệp Web Developer. CiOne gọi người có kinh nghiệm hoặc đang công tác tại các công ty/tập đoàn chuyên nghiệp là Mentor. Mọi thắc mắc của bạn sẽ được giải đáp trực tiếp, không phải chờ đợi lâu khi đang có hứng…</p>
+                                    <div class="clearfix"> </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="banner-main">
+                                    <h3>Được chăm sóc bởi người hướng dẫn</h3>
+                                    <p>Mỗi một học viên sẽ được một Coach tư vấn và quan sát theo dõi suốt hành trình. Khi bạn bị gián đoạn việc học lập trình web hay không có tiến bộ, hãy yên tâm vì luôn có Coach đồng hành.</p>
+                                    <div class="clearfix"> </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="banner-main">
+                                    <h3>Khẳng định thành tích qua các đồ án</h3>
+                                    <p>Tất cả những đồ án (website) các bạn làm đều sẽ được lưu trữ vào hồ sơ điện tử do chính bạn thiết kế để chia sẻ cho nhà tuyển dụng, khách hàng hay bạn bè chiêm ngưỡng.</p>
+                                    <div class="clearfix"> </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="clearfix"> </div>
+                </section>
+            </div>
+       </div>
+    </div>
 </div>
+ <!--header end here-->
+<script defer src="~/Content/js/jquery.flexslider.js"></script>
+<script type="text/javascript">
+    $(function () {
+    });
+    $(window).load(function () {
+        $('.flexslider').flexslider({
+            animation: "slide",
+            start: function (slider) {
+                $('body').removeClass('loading');
+            }
+        });
+    });
+</script>
 
-<div class="row">
-    <div class="col-md-4">
-        <h2>Getting started</h2>
-        <p>
-            ASP.NET MVC gives you a powerful, patterns-based way to build dynamic websites that
-            enables a clean separation of concerns and gives you full control over markup
-            for enjoyable, agile development.
-        </p>
-        <p><a class="btn btn-default" href="http://go.microsoft.com/fwlink/?LinkId=301865">Learn more &raquo;</a></p>
-    </div>
-    <div class="col-md-4">
-        <h2>Get more libraries</h2>
-        <p>NuGet is a free Visual Studio extension that makes it easy to add, remove, and update libraries and tools in Visual Studio projects.</p>
-        <p><a class="btn btn-default" href="http://go.microsoft.com/fwlink/?LinkId=301866">Learn more &raquo;</a></p>
-    </div>
-    <div class="col-md-4">
-        <h2>Web Hosting</h2>
-        <p>You can easily find a web hosting company that offers the right mix of features and price for your applications.</p>
-        <p><a class="btn btn-default" href="http://go.microsoft.com/fwlink/?LinkId=301867">Learn more &raquo;</a></p>
-    </div>
-</div>
+            <!--educate logos end here-->
+            <!--we do start here-->
+            <div class="we-do">
+                <div class="container">
+                    <div class="we-do-main">
+                        <h2 style="margin-top:10px;">
+                            Về CiOne
+                        </h2>
+                     
+                        <p>CiOne được thành lập bởi đội ngũ đam mê Lập trình với kinh nghiệm làm việc và giảng dạy từ 7 năm trở lên. Sứ mệnh của chúng tôi là giúp hàng triệu người Việt Nam có thể tiếp cận đến lĩnh vực lập trình web và thiết bị di động từ mới hoàn toàn trở thành một chuyên gia. Với nhu cầu rất lớn của ngành công nghiệp hiện đại và sức hút từ lao động trẻ, đầy năng động ở Việt Nam. Chúng ta đang đứng trước cơ hội rất lớn để cải thiện đời sống và nâng tầm trí tuệ.</p>
+                        <a href="">Read More</a>
+                        <div class="clearfix"> </div>
+                    </div>
+                </div>
+            </div>
+            <!--we do end here-->
+            <!--pop-up-box-->
+            <script type="text/javascript" src="js/modernizr.custom.53451.js"></script>
+            <link href="css/popuo-box.css" rel="stylesheet" type="text/css" media="all" />
+            <script src="js/jquery.magnific-popup.js" type="text/javascript"></script>
+            <!--pop-up-box-->
+            <!--watch start here-->
+            <hr><!--watch end here-->
+            <!--event start here-->
+            <div class="events">
+                <div class="container">
+                    <div class="events-main">
+                        <div class="events-top">
+                            <h3>Ý kiến từ các chuyên gia</h3>
+                        </div>
+                        <div class="events-grid">
+                            <div class="col-md-3 event-month wthree">
+                                <h3>20</h3>
+                                <h4>Tháng Hai</h4>
+                            </div>
+                            <div class="col-md-5 event-text">
+                                <h4>Hoàng Bảo Duy</h4>
+                                <h5>System Architect tại Schroders, Singapore</h5>
+                                <p>Hiện nay, nhu cầu sở hữu được các chuyên gia về lĩnh vực lập trình web & di động đang được rất nhiều tập đoàn nước ngoài quan tâm và họ nhắm vào con người Việt Nam bởi nhiều yếu tố thuận lợi. Vì thế, CiOne đang làm một việc đúng đắn và có giá trị.</p>
+                              
+                                <p> </p>
+                            </div>
+                            <div class="col-md-4 event-img">
+                                <div class="item item-type-move">
+                                    <a class="item-hover" href="single.html">
+                                        <div class="item-info">
+                                            <div class="headline">
+                                                Hoàng Bảo Duy
+                                                <div class="line"> </div>
+                                            </div>
+                                            <div class="date"></div>
+                                        </div>
+                                        <div class="mask"> </div>
+                                    </a>
+                                    <div class="item-img">
+                                        <img src="~/Content/images/aduy.jpg" class="img-responsive" alt="">
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="clearfix"> </div>
+                        </div>
+                        <div class="events-grid">
+                            <div class="col-md-3 event-month wthree">
+                                <h3>24</h3>
+                                <h4>Tháng Hai</h4>
+                            </div>
+                            <div class="col-md-5 event-text">
+                                <h4>Vi Bảo Quốc</h4>
+                                <h5>Web Development Supervisor tại Indo Trans Logistic</h5>
+                                <p>Mô hình đào tạo mà CiOne đang xây dựng rất hiện đại và tôi được biết trên thế giới hiện nay có 2 website đã làm được như vậy và rất thành công. Đến cả các doanh nghiệp cũng cần sử dụng những dịch vụ đào tạo theo kiểu này. Với tôi, CiOne là một website e-learning đáng tin cậy.</p>
+                             
+                                <p> </p>
+                            </div>
+                            <div class="col-md-4 event-img">
+                                <div class="item item-type-move">
+                                    <a class="item-hover" href="single.html">
+                                        <div class="item-info">
+                                            <div class="headline">
+                                                Vi Bảo Quốc
+                                                <div class="line"> </div>
+                                            </div>
+                                            <div class="date"></div>
+                                        </div>
+                                        <div class="mask"> </div>
+                                    </a>
+                                    <div class="item-img">
+                                        <img src="~/Content/images/aquuoc.jpg" class="img-responsive" alt="">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="clearfix"> </div>
+                        </div>
+                        <div class="events-grid">
+                            <div class="col-md-3 event-month wthree">
+                                <h3>26</h3>
+                                <h4>Tháng Hai</h4>
+                            </div>
+                            <div class="col-md-5 event-text">
+                                <h4>Trần Quang Nam Thái Vũ</h4>
+                                <h5>Technical Analyst tại CSC Corporation</h5>
+                                <p>Website đã hệ thống lại được toàn bộ kiến thức và kỹ năng của một nhà lập trình front-end. Kiến thức được tổ chức rất logic và dựa vào các nguồn tài liệu chuẩn từ tổ chức thế giới W3C. Tôi tin rằng, học viên sau khi hoàn tất lộ trình học sẽ dễ dàng được chào đón bởi các doanh nghiệp đang có nhu cầu.</p>
+                                
+                                <p> </p>
+                            </div>
+                            <div class="col-md-4 event-img">
+                                <div class="item item-type-move">
+                                    <a class="item-hover" href="single.html">
+                                        <div class="item-info">
+                                            <div class="headline">
+                                                Trần Quang Nam Thái Vũ
+                                                <div class="line"> </div>
+                                            </div>
+                                            <div class="date"></div>
+                                        </div>
+                                        <div class="mask"> </div>
+                                    </a>
+                                    <div class="item-img">
+                                        <img src="~/Content/images/gggg.jpg" class="img-responsive" alt="">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="clearfix"> </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+<hr><!--event end here-->
+            <script src="~/Content/js/responsiveslides.min.js"></script>
+            <script>
+                // You can also use "$(window).load(function() {"
+                $(function () {
+                    $("#slider2").responsiveSlides({
+                        auto: true,
+                        pager: true,
+                        speed: 300,
+                        namespace: "callbacks",
+                    });
+                });
+            </script>
+
+            <!--clients star here-->
+            <div class="clients">
+                <div class="container">
+                    <div class="clients-main">
+                        <div class="clients-top">
+                            <h3>Nhận Xét Từ Học Viên</h3>
+                        </div>
+                        <div class="slider-bann wow bounceInRight" data-wow-delay="0.3s">
+                            <ul class="rslides" id="slider2">
+                                <li>
+                                    <div class="clients-text">
+                                        <img src="~/Content/images/tien.jpg" alt="" style="border-radius: 50%; width: 120px; height: 120px;">
+                                        <p>"Các Video với tài liệu của CiOne dạy rất kỹ, kiến thức đào sâu. Mình đã tự làm đồ án (1 website) tại trường nhưng vẫn thấy có nhiều kiến thức cần phải học hỏi tại đây nên quyết định theo học lập trình web tại CiOne. Phải nói sướng nhất là khi mình hỏi, có mentor trả lời ngay."</p>
+                                        <h4>Huỳnh Ngọc Tiển</h4>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="clients-text">
+                                        <img src="images/c2.png" alt="" style="border-radius: 50%; width: 120px; height: 120px;">
+                                        <p>But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system.</p>
+                                        <h4>Smith</h4>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="clients-text">
+                                        <img src="images/c3.png" alt="" style="border-radius: 50%; width: 120px; height: 120px;">
+                                        <p>But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system.</p>
+                                        <h4>Daneal</h4>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <!--clients end here-->
+            <!--footer start here-->
+            <div class="footer w3ls">
+                <div class="container">
+                    <div class="footer-main">
+                        <div class="footer-top">
+                          
+                            <div class="col-md-4 ftr-grid">
+                                <h3>Địa chỉ</h3>
+                                <div class="ftr-address">
+                                    <div class="local">
+                                        <span class="glyphicon glyphicon-map-marker" aria-hidden="true"></span>
+                                    </div>
+                                    <div class="ftr-text">
+                                        <p> Vườn Ươm TBI, Đại Học Bách Khoa, 268, Lý Thường Kiệt, Phường 14, Quận 10, TP. Hồ Chí Minh</p>
+                                    </div>
+                                    <div class="clearfix"> </div>
+                                </div>
+                                <div class="ftr-address">
+                                    <div class="local">
+                                        <span class="glyphicon glyphicon-phone" aria-hidden="true"></span>
+                                    </div>
+                                    <div class="ftr-text">
+                                        <p>0979164197</p>
+                                    </div>
+                                    <div class="clearfix"> </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4 ftr-grid">
+                                <h3>Email</h3>
+                                <form action="#" method="post">
+                                    <input type="text" placeholder="Nhập Email vào đây" name="Enter Email" required="">
+                                    <input type="submit" value="">
+                                </form>
+                                <ul class="ftr-social-icons">
+                                    <li><a class="fa" href="#"> </a></li>
+                                    <li><a class="tw" href="#"> </a></li>
+                                    <li><a class="dri" href="#"> </a></li>
+                                    <li><a class="p" href="#"> </a></li>
+
+                                </ul>
+                            </div>
+                            <div class="clearfix"> </div>
+                        </div>
+                        <div class="footer-bottom">
+                           
+                            <div class="col-md-6 copyrights">
+                                <p>© 2017 CiOne Elearning</p>
+                            </div>
+                            <div class="clearfix"> </div>
+                        </div>
+                    </div>
+                </div>
+            </div>

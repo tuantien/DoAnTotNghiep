@@ -59,7 +59,7 @@ namespace CiOneElearning.Controllers
         }
 
         // GET: AspNetUsers/Edit/5
-        public ActionResult Edit(string id)
+        public ActionResult Edit(string id) // Cho nay nek, edit 
         {
             if (id == null)
             {
@@ -84,7 +84,8 @@ namespace CiOneElearning.Controllers
             {
                 db.Entry(aspNetUser).State = EntityState.Modified;
                 db.SaveChanges();
-                return RedirectToAction("Index");
+
+                return RedirectToAction("Details", new { id = aspNetUser.Id});
             }
             return View(aspNetUser);
         }

@@ -1,16 +1,33 @@
 ﻿@model CiOneElearning.Models.AspNetUser
 
 @{
-    ViewBag.Title = "Details";
+    ViewBag.Title = "Thông Tin Tài Khoản";
     Layout = "~/Views/LayOut/_HomeLayout.cshtml";
 }
 
-<h2>Details</h2>
+
 
 <div>
-    <h4>AspNetUser</h4>
+    <h1>@ViewBag.Title</h1>
     <hr />
     <dl class="dl-horizontal">
+        @Html.HiddenFor(m => m.Id)
+
+        @Html.HiddenFor(m => m.AccessFailedCount)
+
+        @Html.HiddenFor(m => m.EmailConfirmed)
+
+        @Html.HiddenFor(m => m.LockoutEnabled)
+
+        @Html.HiddenFor(m => m.LockoutEndDateUtc)
+
+        @Html.HiddenFor(m => m.PasswordHash)
+
+        @Html.HiddenFor(m => m.PhoneNumberConfirmed)
+
+        @Html.HiddenFor(m => m.SecurityStamp)
+
+        @Html.HiddenFor(m => m.TwoFactorEnabled)
         <dt>
             @Html.DisplayNameFor(model => model.Email)
         </dt>
@@ -19,81 +36,17 @@
             @Html.DisplayFor(model => model.Email)
         </dd>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.EmailConfirmed)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.EmailConfirmed)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.PasswordHash)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.PasswordHash)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.SecurityStamp)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.SecurityStamp)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.PhoneNumber)
+       <dt>
+           <strong>Số Điện Thoại</strong>
         </dt>
 
         <dd>
             @Html.DisplayFor(model => model.PhoneNumber)
-        </dd>
+        </dd>       
 
         <dt>
-            @Html.DisplayNameFor(model => model.PhoneNumberConfirmed)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.PhoneNumberConfirmed)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.TwoFactorEnabled)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.TwoFactorEnabled)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.LockoutEndDateUtc)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.LockoutEndDateUtc)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.LockoutEnabled)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.LockoutEnabled)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.AccessFailedCount)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.AccessFailedCount)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.UserName)
-        </dt>
+            <strong>Họ và Tên</strong>
+         </dt>
 
         <dd>
             @Html.DisplayFor(model => model.UserName)
@@ -103,6 +56,10 @@
     </dl>
 </div>
 <p>
-    @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
-    @Html.ActionLink("Back to List", "Index")
+    <a href="@Url.Action("Edit", "AspNetUsers", new { id = Model.Id })" class="btn btn-success">
+        Sửa
+    </a>
+    <a href="@Url.Action("Index", "Cource")" class="btn btn-secondary">
+        Thoát
+    </a> 
 </p>

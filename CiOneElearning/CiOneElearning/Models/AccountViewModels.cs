@@ -12,6 +12,7 @@ namespace CiOneElearning.Models
 
     public class ExternalLoginListViewModel
     {
+         [Required(ErrorMessage = "Đã tồn tại")]
         public string ReturnUrl { get; set; }
     }
 
@@ -25,7 +26,7 @@ namespace CiOneElearning.Models
 
     public class VerifyCodeViewModel
     {
-        [Required]
+        [Required(ErrorMessage = "Đã tồn tại")]
         public string Provider { get; set; }
 
         [Required]

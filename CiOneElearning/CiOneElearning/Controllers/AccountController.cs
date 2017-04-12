@@ -138,7 +138,7 @@ namespace CiOneElearning.Controllers
             switch (result)
             {
                 case SignInStatus.Success:
-                    return RedirectToLocal(model.ReturnUrl);
+                    return RedirectToAction("Index", "Cource");
                 case SignInStatus.LockedOut:
                     return View("Lockout");
                 case SignInStatus.Failure:
@@ -229,7 +229,7 @@ namespace CiOneElearning.Controllers
                 // Send an email with this link
                 string code = await UserManager.GeneratePasswordResetTokenAsync(user.Id);
                 var callbackUrl = Url.Action("ResetPassword", "Account", new { userId = user.Id, code = code }, protocol: Request.Url.Scheme);
-                await UserManager.SendEmailAsync(user.Id, "Lấy lại mật khảu", "Click vào  <a href=\"" + callbackUrl + "\">đây</a> để thực hiện lấy lại mật khẩu.");
+                await UserManager.SendEmailAsync(user.Id, "Lấy lại mật khẩu", "Click vào  <a href=\"" + callbackUrl + "\">đây</a> để thực hiện lấy lại mật khẩu.");
                 return RedirectToAction("ForgotPasswordConfirmation", "Account");
             }
 
@@ -349,7 +349,7 @@ namespace CiOneElearning.Controllers
             switch (result)
             {
                 case SignInStatus.Success:
-                    return RedirectToLocal(returnUrl);
+                    return RedirectToAction("Index", "Cource");
                 case SignInStatus.LockedOut:
                     return View("Lockout");
                 case SignInStatus.RequiresVerification:
@@ -391,7 +391,7 @@ namespace CiOneElearning.Controllers
                     if (result.Succeeded)
                     {
                         await SignInManager.SignInAsync(user, isPersistent: false, rememberBrowser: false);
-                        return RedirectToLocal(returnUrl);
+                        return RedirectToAction("Index", "Cource");
                     }
                 }
                 AddErrors(result);

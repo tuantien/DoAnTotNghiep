@@ -97,6 +97,7 @@
           </Key>
           <Property Name="ID_ChuDe" Type="int" Nullable="false" />
           <Property Name="TenChuDe" Type="nvarchar" MaxLength="100" />
+          <Property Name="ID_KhoaHoc" Type="int" />
         </EntityType>
         <EntityType Name="HocVien">
           <Key>
@@ -364,6 +365,7 @@
           <Property Name="ID_ChuDe" Type="Int32" Nullable="false" />
           <Property Name="TenChuDe" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
           <NavigationProperty Name="BaiGiangs" Relationship="Self.FK_BaiGiang_ChuDe" FromRole="ChuDe" ToRole="BaiGiang" />
+          <Property Name="ID_KhoaHoc" Type="Int32" />
         </EntityType>
         <EntityType Name="HocVien">
           <Key>
@@ -664,6 +666,7 @@
           <EntitySetMapping Name="ChuDes">
             <EntityTypeMapping TypeName="tien_do_anModel.ChuDe">
               <MappingFragment StoreEntitySet="ChuDe">
+                <ScalarProperty Name="ID_KhoaHoc" ColumnName="ID_KhoaHoc" />
                 <ScalarProperty Name="ID_ChuDe" ColumnName="ID_ChuDe" />
                 <ScalarProperty Name="TenChuDe" ColumnName="TenChuDe" />
               </MappingFragment>

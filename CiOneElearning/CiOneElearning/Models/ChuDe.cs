@@ -22,6 +22,7 @@ namespace CiOneElearning.Models
     
         public int ID_ChuDe { get; set; }
         public string TenChuDe { get; set; }
+        public Nullable<int> ID_KhoaHoc { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<BaiGiang> BaiGiangs { get; set; }

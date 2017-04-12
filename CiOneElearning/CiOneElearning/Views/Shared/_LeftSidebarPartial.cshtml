@@ -48,6 +48,13 @@
                      <span class="media-body">Danh Sách Khóa Học</span>
                  </a>
              </li>
+             <li class="dropdown pmd-dropdown">
+                 @{string userId = User.Identity.GetUserId().ToString();}
+                 <a href="@Url.Action("Details", "AspNetUsers", new { id = userId})"> 
+                     <i class="material-icons media-left pmd-sm">collections_bookmark</i>
+                     <span class="media-body">Thông tin cá nhân</span>
+                 </a>
+             </li>
 
              <li class="dropdown pmd-dropdown">
                  <a aria-expanded="false" data-toggle="dropdown" class="btn-user dropdown-toggle media" data-sidebar="true" href="javascript:void(0);">

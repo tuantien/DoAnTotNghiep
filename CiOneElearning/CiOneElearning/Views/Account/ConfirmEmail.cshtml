@@ -1,10 +1,18 @@
 ﻿@{
     ViewBag.Title = "Xác thực thành công";
 }
+<div class="container body-content">
+    <h2>@ViewBag.Title.</h2>
+    <div>
+        <p>
+            Cảm ơn bạn đã đăng ký. Bạn có thể @Html.ActionLink("Click vào đây để đăng nhập", "Login", "Account", routeValues: null, htmlAttributes: new { id = "loginLink" })
+        </p>
+    </div>
 
-<h2>@ViewBag.Title.</h2>
-<div>
-    <p>
-        Cảm ơn bạn đã đăng ký. Bạn có thể @Html.ActionLink("Click vào đây để đăng nhập", "Login", "Account", routeValues: null, htmlAttributes: new { id = "loginLink" })
-    </p>
+    <hr />
+    <footer>
+        <p>&copy; @DateTime.Now.Year - My ASP.NET Application</p>
+    </footer>
 </div>
+
+
